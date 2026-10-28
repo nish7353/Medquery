@@ -10,10 +10,11 @@ passage it came from and that passage's source.
 > **Educational prototype.** MedQuery does not diagnose, treat or prescribe, and its
 > output is not verified medical advice.
 
-> **The knowledge base is not included.** The app ships with a retrieval *interface* and
-> an adapter that reports `NOT_CONFIGURED`. Until you connect your own knowledge base,
-> every query says that evidence retrieval is unavailable. It never shows a made-up answer
-> or citation. See [Connecting your knowledge base](#connecting-your-knowledge-base).
+> **The knowledge base is built locally, not committed.** `python -m knowledge.build all`
+> downloads MedlinePlus, MedQuAD, a BioASQ subset and PubMed abstracts and indexes them
+> (about 45,000 documents). Until it has been built and enabled in `.env`, every query says
+> that evidence retrieval is unavailable. It never shows a made-up answer or citation.
+> See [Built-in knowledge base](#built-in-knowledge-base).
 
 ---
 
@@ -26,9 +27,10 @@ passage it came from and that passage's source.
 5. [API reference](#api-reference)
 6. [Answer statuses](#answer-statuses)
 7. [Configuration](#configuration)
-8. [Connecting your knowledge base](#connecting-your-knowledge-base)
-9. [Testing](#testing)
-10. [Known limitations](#known-limitations)
+8. [Built-in knowledge base](#built-in-knowledge-base)
+9. [Connecting your knowledge base](#connecting-your-knowledge-base)
+10. [Testing](#testing)
+11. [Known limitations](#known-limitations)
 
 ---
 
@@ -76,8 +78,9 @@ medquery/
     ├── pytest.ini
     ├── app/                     FastAPI app, config, routes, storage, model loading
     ├── query_processing/        preprocessing + BERT encoder
+    ├── knowledge/               built-in knowledge base: schema, importers, chunking, index, CLI
     ├── retrieval/               interface, NOT_CONFIGURED adapter, adapter template
-    │   └── adapters/            ← put your knowledge-base adapter here
+    │   └── adapters/            medquery_kb.py (built-in KB) + template for your own
     ├── answer_processing/       evidence gate, answer generators, response models
     └── tests/                   pytest suite (mocks only)
 ```
@@ -93,7 +96,9 @@ medquery/
 | NLP | **Hugging Face Transformers 4.46** + **PyTorch 2.5 (CPU)** | Standard way to load pretrained BERT; CPU wheels avoid a GPU requirement |
 | Query encoder | `bert-base-uncased` (configurable) | General BERT; can swap to BioBERT / BiomedBERT |
 | Answer extraction | `deepset/bert-base-cased-squad2` (configurable) | BERT fine-tuned on SQuAD 2.0, which can also say "no answer here" |
-| Storage | SQLite (Python standard library) | Query history with no extra service |
+| Storage | SQLite (Python standard library) | Query history and the knowledge base, with no extra service |
+| Retrieval embeddings | `sentence-transformers/all-MiniLM-L6-v2` via sentence-transformers 3.3 | Small distilled BERT trained for semantic search; fast on CPU |
+| Vector search | numpy exact cosine search | Same results as a FAISS flat index; FAISS's Windows build crashes when loaded with PyTorch |
 | Frontend | HTML + CSS + JavaScript ES modules | No build tooling; served directly by FastAPI |
 | Tests | pytest, Node's built-in test runner, jsdom | Run offline, no knowledge base or paid API needed |
 
@@ -237,9 +242,95 @@ comments. The main ones:
 No API keys are required. If you add an adapter that needs a secret, read it from an
 environment variable inside the adapter and keep it in `.env`, which is git-ignored.
 
+## Built-in knowledge base
+
+### Sources
+
+| Dataset | Documents | What it adds | Licence |
+|---|---|---|---|
+| [MedlinePlus health topics](https://medlineplus.gov/xml.html) | 1,016 | Patient-friendly summaries of conditions, symptoms and treatments (NLM) | Public domain |
+| [MedQuAD](https://github.com/abachaa/MedQuAD) | 16,373 | Q&A pairs from 9 NIH sites, typed as symptoms, treatment, causes, etc. | CC BY 4.0 |
+| [BioASQ subset](https://huggingface.co/datasets/rag-datasets/rag-mini-bioasq) | 28,001 | PubMed abstracts from the BioASQ biomedical QA benchmark | CC BY 2.5 |
+| [PubMed](https://pubmed.ncbi.nlm.nih.gov/) via NCBI E-utilities | 495 | Recent review articles for 10 project topics (diabetes, hypertension, asthma, dengue, malaria, tuberculosis, anemia, migraine, kidney disease, heart disease) | NLM terms of use |
+
+Not included:
+- **MIMIC-III.** It requires credentialed PhysioNet access, and its data use agreement forbids
+  sharing it with online services. Its notes are also patient records, not reference material.
+- **Three MedQuAD subsets** (A.D.A.M. encyclopedia, drugs, herbs and supplements). The
+  dataset's authors removed their answers for copyright reasons.
+
+### Building it
+
+```powershell
+cd backend
+.venv\Scripts\activate
+pip install -r requirements-ml.txt
+python -m knowledge.build all      # download, import, index (about 2 hours on a laptop CPU, mostly indexing)
+```
+
+Everything is written to `backend/data/kb/` (git-ignored). Each step can also be run on its
+own: `download`, `import`, `index` and `stats`. `--sources medlineplus,medquad` limits the build
+to some datasets. Then enable it in `.env` and restart the server:
+
+```ini
+MEDQUERY_KB_ADAPTER=retrieval.adapters.medquery_kb:MedQueryKnowledgeBase
+MEDQUERY_KB_MIN_RELEVANCE=0.45
+```
+
+### How it works
+
+1. **Import** (`knowledge/sources.py`). Each dataset is read into documents that carry their
+   source URL, publisher and licence. Records without text or a source URL are rejected.
+2. **Clean** (`knowledge/chunking.py`). HTML is converted to headings and paragraphs, and a
+   short, explicit list of non-informative sentences is removed: attribution lines, NCI site
+   navigation, and the paragraph GARD repeats in about 2,200 answers explaining its symptom
+   table. Sentences that repeat but carry facts (such as inheritance patterns) are kept.
+3. **Chunk.** Passages of about 180 words with a 30-word overlap. They never cross a section
+   heading, and the heading is kept at the top of the passage.
+4. **Store** (`knowledge/db.py`). SQLite with the five tables from the project design:
+   `medical_sources`, `medical_topics`, `medical_documents`, `document_chunks` and `medical_claims`.
+5. **Index** (`knowledge/index.py`). Each approved passage, prefixed with its document title, is
+   embedded and L2-normalised.
+6. **Search** (`retrieval/adapters/medquery_kb.py`). The question is embedded with the same
+   model, and the top passages by cosine similarity are re-checked in SQLite. Only passages whose
+   document **and** source are still `approved` are returned.
+
+### Measured results
+
+These were measured on 28 Oct 2026 with the index described above (78,874 passages,
+`all-MiniLM-L6-v2`, laptop CPU):
+
+| Measure | Result |
+|---|---|
+| BioASQ retrieval, 500 random expert questions with gold PubMed ids | Recall@5 = 0.676, MRR@10 = 0.567 |
+| Top-1 score for 20 everyday medical questions | 0.578 – 0.770 (median 0.729) |
+| Top-1 score for 15 off-topic questions (cooking, sport, travel, IT…) | 0.296 – 0.368 (median 0.296) |
+| Search time | about 44 ms per question |
+| Index build time | about 2 hours on CPU |
+
+`MEDQUERY_KB_MIN_RELEVANCE=0.45` sits in the gap between the two score ranges, so off-topic
+questions get "no relevant evidence" instead of an unrelated passage. The question sets are
+small: re-check the threshold against a larger test set before relying on it.
+
+### Review status
+
+Imported documents are `approved` at **source level**: they come from NIH/NLM or peer-reviewed
+literature, but nobody has read each one. This is not the per-document expert review the
+project design describes. Change the status of a document or a whole dataset with:
+
+```powershell
+python -m knowledge.build review --document 42 --status rejected
+python -m knowledge.build review --dataset bioasq --status pending
+```
+
+Rejecting or un-approving takes effect on the next query, with no rebuild needed. Approving
+something new requires `python -m knowledge.build index`. The `medical_claims` table is
+created but left empty, ready for claim-level review.
+
 ## Connecting your knowledge base
 
-MedQuery only needs one class that implements `retrieval.base.Retriever`.
+The built-in knowledge base is one adapter. To use a different one, MedQuery only needs one
+class that implements `retrieval.base.Retriever`.
 
 ### 1. The contract (`backend/retrieval/base.py`)
 
@@ -312,7 +403,7 @@ and reports the knowledge base as not configured, with the reason.
 ## Testing
 
 ```powershell
-# Backend: 60 tests, all mocked, no model download or knowledge base needed
+# Backend: 67 tests, all mocked, no model download or knowledge base needed
 cd backend
 .venv\Scripts\python -m pytest
 
@@ -328,7 +419,8 @@ truncation, graceful failure); the `NOT_CONFIGURED` adapter; adapter loading fro
 path; timeouts and adapter exceptions; empty and filtered retrieval results; the pipeline with
 and without evidence (and a check that the answer generator is never called without evidence);
 low-confidence and no-answer cases; the extractive generator's span selection; persistence and
-history; and UI behaviour (status pill, templates, validation, result rendering, HTML escaping,
+history; the knowledge base (HTML cleaning, chunking and overlap, boilerplate removal, rejected
+records, approved-only retrieval, and rejection taking effect without re-indexing); and UI behaviour (status pill, templates, validation, result rendering, HTML escaping,
 `javascript:` URL blocking, error/retry, and history replay).
 
 The test doubles live in `backend/tests/doubles.py` and the frontend DOM test. They use neutral
@@ -336,7 +428,14 @@ placeholder strings, not medical content, and are never loaded by the running ap
 
 ## Known limitations
 
-- **No knowledge base is included.** Until you connect one, every query returns `KB_NOT_CONFIGURED`.
+- **The knowledge base must be built locally** (about 2 hours on CPU) and enabled in `.env`. Until
+  then every query returns `KB_NOT_CONFIGURED`.
+- **Approval is at source level,** not per-document expert review (see [Review status](#review-status)).
+- **Coverage is uneven.** MedQuAD leans towards rare and genetic diseases, BioASQ towards
+  research questions, and PubMed covers only 10 topics. Common questions are best served by
+  MedlinePlus, which has about 1,000 topics.
+- **Similarity is not correctness.** The relevance threshold filters weak matches, but a
+  passage that is close in meaning can still be the wrong evidence.
 - **Extractive answers are short spans.** The QA model copies phrases from the evidence; it
   doesn't write summaries. Questions that need several facts combined may get
   `NO_ANSWER_IN_EVIDENCE` or a partial span.
