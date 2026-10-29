@@ -12,6 +12,10 @@ from typing import Any, Callable
 
 logger = logging.getLogger(__name__)
 
+# Loads run one at a time across all models: importing transformers from two threads at
+# once can leave it half-initialised (e.g. "cannot import name is_torch_npu_available").
+_LOAD_LOCK = threading.Lock()
+
 
 class ModelState(str, Enum):
     NOT_LOADED = "not_loaded"
@@ -41,7 +45,8 @@ class LazyModel:
                 self.state = ModelState.LOADING
                 logger.info("Loading %s model '%s'...", self.label, self.model_name)
                 try:
-                    self._value = self._loader()
+                    with _LOAD_LOCK:
+                        self._value = self._loader()
                     self.state = ModelState.READY
                     logger.info("%s model '%s' ready", self.label, self.model_name)
                 except Exception as exc:  # noqa: BLE001 - missing deps, no network, bad name...

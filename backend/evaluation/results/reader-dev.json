@@ -1,0 +1,194 @@
+{
+  "task": "reader",
+  "split": "dev",
+  "run_at": "2026-10-29T14:43:33+00:00",
+  "summary": {
+    "questions": 20,
+    "ExactMatch": 0.25,
+    "F1": 0.4571,
+    "no_answer_rate": 0.35,
+    "qa_model": "deepset/bert-base-cased-squad2"
+  },
+  "rows": [
+    {
+      "id": "278",
+      "question": "How many children were infected by HIV-1 in 2008-2009, worldwide?",
+      "gold": "more than 400,000 children were infected worldwide, mostly through MTCT and 90% of them lived in sub-Saharan Africa.",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "316",
+      "question": "What is the role of C-C Motif Chemokine Ligand 3 Like 1 (CCL3L1) in mother to child transmission of HIV-1?",
+      "gold": "High copy numbers of CCL3L1, a potent HIV-1 suppressive ligand for CCR5, are associated with higher chemokine production and lower risk of MTCT of HIV-1 among South African infants",
+      "prediction": "potent HIV-1 suppressive ligand",
+      "confidence": 0.1801,
+      "em": 0.0,
+      "f1": 0.25
+    },
+    {
+      "id": "321",
+      "question": "How can CCR5's effect in HIV-1 transmission be reduced?",
+      "gold": "The 32-pb deletion polymorphism in CCR5 has be shown to protect from vertical transmission of HIV-1",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "568",
+      "question": "What is IFITM?",
+      "gold": "interferon-induced transmembrane",
+      "prediction": "interferon-induced transmembrane",
+      "confidence": 0.8484,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "569",
+      "question": "How many cysteine residues are contained in the first transmembrane domain of IFITM3?",
+      "gold": "three",
+      "prediction": "three",
+      "confidence": 0.8475,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "571",
+      "question": "What interaction is inhibited by the presence of 2-bromopalmitic acid (2BP)?",
+      "gold": "IFITM5 with FKBP11",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "573",
+      "question": "What regulates the antiviral activity of IFITM3?",
+      "gold": "S-palmitoylation on the protein",
+      "prediction": "S-palmitoylation on the protein",
+      "confidence": 0.6617,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "576",
+      "question": "What is the amino acid similarity between IFITM5 and the other IFITM proteins?",
+      "gold": "~ 65% similarity",
+      "prediction": "~ 65%",
+      "confidence": 0.2857,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "580",
+      "question": "What amino acid might be involved in calcium binding in the C-terminal region of a protein?",
+      "gold": "aspartate",
+      "prediction": "aspartate-rich domain",
+      "confidence": 0.8707,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "919",
+      "question": "How many nucleotides does bovine coronavirus contain?",
+      "gold": "30,847 nucleotides",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "920",
+      "question": "What is the size of the orf1ab gene in bovine coronavirus?",
+      "gold": "20kb",
+      "prediction": "20kb nucleotides",
+      "confidence": 0.6536,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "1658",
+      "question": "What is a significant cause of Influenze like illness among healthy adolescents and adults presenting for medical evaluation?",
+      "gold": "HCoV",
+      "prediction": "HCoV",
+      "confidence": 0.9621,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1660",
+      "question": "Which Human Coronavirus showed species specific clinical characteristics of its infection?",
+      "gold": "HCoV‐HKU1",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1717",
+      "question": "What causes the outbreak of SARS and MERS.",
+      "gold": "Highly virulent species of HCoV",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1718",
+      "question": "What is the case fatality rate of SARS and MERS?",
+      "gold": "ranged from 14% to 45%",
+      "prediction": "14% to 45%",
+      "confidence": 0.6518,
+      "em": 0.0,
+      "f1": 0.75
+    },
+    {
+      "id": "2996",
+      "question": "What is required for a Hepatitis B infection in cells?",
+      "gold": "both intracellular and cell-surface factors",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "2997",
+      "question": "What regulates the broad, but less specific, virus-cell interaction in a hepatitis B infection?",
+      "gold": "heparan sulfates in the membrane proteins",
+      "prediction": "heparan sulfates",
+      "confidence": 0.5741,
+      "em": 0.0,
+      "f1": 0.5714
+    },
+    {
+      "id": "2999",
+      "question": "Where is NTCP located in the body?",
+      "gold": "lateral surface (canalicular) of hepatocytes",
+      "prediction": "lateral surface",
+      "confidence": 0.3169,
+      "em": 0.0,
+      "f1": 0.5714
+    },
+    {
+      "id": "3001",
+      "question": "Is NTCP sufficient to allow HBV infection?",
+      "gold": "not sufficient",
+      "prediction": "not",
+      "confidence": 0.8178,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "3002",
+      "question": "Why is NTCP thought to not be sufficient for HBV infection?",
+      "gold": "the majority of HepaRG cells were found to express NPCT but not to be infected",
+      "prediction": "majority of HepaRG cells were found to express NPCT but not to be infected",
+      "confidence": 0.268,
+      "em": 1.0,
+      "f1": 1.0
+    }
+  ]
+}

@@ -13,6 +13,7 @@ from app.container import Services
 from app.lazy_model import LazyModel
 from app.main import create_app
 from app.storage import QueryStore
+from multilingual.service import MultilingualService
 from query_processing.bert_encoder import EncodedQuery
 from query_processing.understanding import QueryUnderstanding
 from retrieval.base import Passage, RetrievalQuery, RetrievalResult, RetrievalStatus, Retriever
@@ -95,12 +96,14 @@ def make_pipeline(retriever=None, generator=None, encoder=None, **kw) -> AnswerP
     )
 
 
-def make_client(retriever=None, generator=None, encoder=None) -> TestClient:
+def make_client(retriever=None, generator=None, encoder=None, sarvam=None) -> TestClient:
+    """`sarvam` is a SarvamClient (normally one backed by a fake transport) or None for English only."""
     settings = Settings(database_path=":memory:", environment="test", _env_file=None)
     encoder = encoder or FakeEncoder()
     generator = generator or FakeGenerator()
     retrieval = RetrievalService(retriever or NotConfiguredRetriever(), timeout_seconds=2.0)
     pipeline = AnswerPipeline(QueryUnderstanding(encoder), retrieval, generator)
-    services = Services(settings, encoder, retrieval, generator, pipeline, QueryStore(":memory:"))
+    services = Services(settings, encoder, retrieval, generator, pipeline, QueryStore(":memory:"),
+                        MultilingualService(sarvam))
     return TestClient(create_app(settings, services))
 

@@ -12,15 +12,17 @@ export class ApiError extends Error {
   }
 }
 
-async function request(path, { method = "GET", body, timeoutMs = 120000 } = {}) {
+async function request(path, { method = "GET", body, timeoutMs = 120000, raw = false } = {}) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+  const isForm = typeof FormData !== "undefined" && body instanceof FormData;
   let res;
   try {
     res = await fetch(API_BASE + path, {
       method,
-      headers: body ? { "Content-Type": "application/json" } : undefined,
-      body: body ? JSON.stringify(body) : undefined,
+      // FormData sets its own multipart Content-Type with the boundary.
+      headers: body && !isForm ? { "Content-Type": "application/json" } : undefined,
+      body: body ? (isForm ? body : JSON.stringify(body)) : undefined,
       signal: ctrl.signal,
     });
   } catch (err) {
@@ -29,6 +31,7 @@ async function request(path, { method = "GET", body, timeoutMs = 120000 } = {}) 
   } finally {
     clearTimeout(timer);
   }
+  if (raw && res.ok) return res.blob();
   let payload = null;
   try {
     payload = await res.json();
@@ -44,7 +47,17 @@ async function request(path, { method = "GET", body, timeoutMs = 120000 } = {}) 
 
 export const api = {
   health: () => request("/health", { timeoutMs: 10000 }),
-  ask: (question) => request("/query", { method: "POST", body: { question } }),
+  languages: () => request("/languages", { timeoutMs: 10000 }),
+  ask: (question, language = "en-IN") => request("/query", { method: "POST", body: { question, language } }),
+  transcribe: (audio, language) => {
+    const form = new FormData();
+    const ext = (audio.type.split("/")[1] || "webm").split(";")[0];
+    form.append("file", audio, `question.${ext}`);
+    form.append("language", language);
+    return request("/transcribe", { method: "POST", body: form, timeoutMs: 45000 });
+  },
+  /** Returns a WAV Blob of `text` read aloud in `language`. */
+  speech: (text, language) => request("/speech", { method: "POST", body: { text, language }, timeoutMs: 45000, raw: true }),
   getQuery: (id) => request(`/query/${encodeURIComponent(id)}`),
   history: () => request("/history"),
   clearHistory: () => request("/history", { method: "DELETE" }),

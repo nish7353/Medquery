@@ -1,0 +1,514 @@
+{
+  "task": "scope",
+  "split": "dev",
+  "run_at": "2026-10-29T14:54:47+00:00",
+  "summary": {
+    "questions": 60,
+    "min_relevance": 0.45,
+    "in_scope_answered": 1.0,
+    "off_topic_refused": 1.0,
+    "in_scope_top_score": [
+      0.6019,
+      0.8314
+    ],
+    "off_topic_top_score": [
+      0.1935,
+      0.3937
+    ],
+    "threshold_sweep_balanced_accuracy": {
+      "0.25": 0.6666,
+      "0.30": 0.8,
+      "0.35": 0.9,
+      "0.40": 1.0,
+      "0.45": 1.0,
+      "0.50": 1.0,
+      "0.55": 1.0,
+      "0.60": 1.0,
+      "0.65": 0.9667,
+      "0.70": 0.9
+    },
+    "best_threshold": 0.45
+  },
+  "rows": [
+    {
+      "id": "in_scope-0",
+      "question": "What are the common symptoms of anemia?",
+      "in_scope": true,
+      "top_score": 0.7449,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-1",
+      "question": "What causes type 2 diabetes?",
+      "in_scope": true,
+      "top_score": 0.8314,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-2",
+      "question": "How is high blood pressure treated?",
+      "in_scope": true,
+      "top_score": 0.6837,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-3",
+      "question": "What are the early signs of a heart attack?",
+      "in_scope": true,
+      "top_score": 0.7434,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-4",
+      "question": "How is asthma diagnosed?",
+      "in_scope": true,
+      "top_score": 0.6764,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-5",
+      "question": "What is dengue fever?",
+      "in_scope": true,
+      "top_score": 0.7799,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-6",
+      "question": "How is malaria spread?",
+      "in_scope": true,
+      "top_score": 0.6019,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-7",
+      "question": "What are the symptoms of tuberculosis?",
+      "in_scope": true,
+      "top_score": 0.7775,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-8",
+      "question": "What triggers a migraine?",
+      "in_scope": true,
+      "top_score": 0.7129,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-9",
+      "question": "What are the stages of chronic kidney disease?",
+      "in_scope": true,
+      "top_score": 0.7063,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-10",
+      "question": "What is the difference between type 1 and type 2 diabetes?",
+      "in_scope": true,
+      "top_score": 0.7428,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-11",
+      "question": "How can I lower my cholesterol?",
+      "in_scope": true,
+      "top_score": 0.7584,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-12",
+      "question": "What are the side effects of chemotherapy?",
+      "in_scope": true,
+      "top_score": 0.7419,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-13",
+      "question": "What causes kidney stones?",
+      "in_scope": true,
+      "top_score": 0.7512,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-14",
+      "question": "What is a stroke?",
+      "in_scope": true,
+      "top_score": 0.7399,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-15",
+      "question": "How is pneumonia treated?",
+      "in_scope": true,
+      "top_score": 0.7233,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-16",
+      "question": "What are the symptoms of thyroid problems?",
+      "in_scope": true,
+      "top_score": 0.7139,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-17",
+      "question": "What is osteoporosis?",
+      "in_scope": true,
+      "top_score": 0.7381,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-18",
+      "question": "How does the flu spread?",
+      "in_scope": true,
+      "top_score": 0.6102,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-19",
+      "question": "What are the warning signs of skin cancer?",
+      "in_scope": true,
+      "top_score": 0.741,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-20",
+      "question": "What causes iron deficiency?",
+      "in_scope": true,
+      "top_score": 0.7637,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-21",
+      "question": "How is hepatitis B transmitted?",
+      "in_scope": true,
+      "top_score": 0.7062,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-22",
+      "question": "What are the symptoms of depression?",
+      "in_scope": true,
+      "top_score": 0.7637,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-23",
+      "question": "What is celiac disease?",
+      "in_scope": true,
+      "top_score": 0.7781,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-24",
+      "question": "What causes chest pain?",
+      "in_scope": true,
+      "top_score": 0.7625,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-25",
+      "question": "How is arthritis treated?",
+      "in_scope": true,
+      "top_score": 0.7015,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-26",
+      "question": "What are the symptoms of COVID-19?",
+      "in_scope": true,
+      "top_score": 0.6577,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-27",
+      "question": "What is sickle cell disease?",
+      "in_scope": true,
+      "top_score": 0.729,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-28",
+      "question": "How is epilepsy treated?",
+      "in_scope": true,
+      "top_score": 0.7183,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "in_scope-29",
+      "question": "What causes high blood sugar?",
+      "in_scope": true,
+      "top_score": 0.6912,
+      "answers": true,
+      "correct": true
+    },
+    {
+      "id": "off_topic-0",
+      "question": "How do I bake sourdough bread?",
+      "in_scope": false,
+      "top_score": 0.3178,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-1",
+      "question": "Who won the football world cup in 2018?",
+      "in_scope": false,
+      "top_score": 0.221,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-2",
+      "question": "What is the capital of Australia?",
+      "in_scope": false,
+      "top_score": 0.2529,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-3",
+      "question": "How do I change a flat tyre?",
+      "in_scope": false,
+      "top_score": 0.2515,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-4",
+      "question": "What is the best laptop for programming?",
+      "in_scope": false,
+      "top_score": 0.283,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-5",
+      "question": "How do I reverse a linked list in Python?",
+      "in_scope": false,
+      "top_score": 0.2842,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-6",
+      "question": "What time does the sun set in Paris in June?",
+      "in_scope": false,
+      "top_score": 0.2704,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-7",
+      "question": "How do I grow tomatoes on a balcony?",
+      "in_scope": false,
+      "top_score": 0.3933,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-8",
+      "question": "What are good places to visit in Japan?",
+      "in_scope": false,
+      "top_score": 0.3627,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-9",
+      "question": "How do I make a paper airplane?",
+      "in_scope": false,
+      "top_score": 0.3937,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-10",
+      "question": "Who wrote Pride and Prejudice?",
+      "in_scope": false,
+      "top_score": 0.2061,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-11",
+      "question": "What is the exchange rate between dollars and euros?",
+      "in_scope": false,
+      "top_score": 0.2291,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-12",
+      "question": "How do I tie a tie?",
+      "in_scope": false,
+      "top_score": 0.3358,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-13",
+      "question": "What is the plot of the movie Inception?",
+      "in_scope": false,
+      "top_score": 0.271,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-14",
+      "question": "How do I set up a home Wi-Fi router?",
+      "in_scope": false,
+      "top_score": 0.1981,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-15",
+      "question": "What is the rule for offside in football?",
+      "in_scope": false,
+      "top_score": 0.3218,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-16",
+      "question": "How many planets are in the solar system?",
+      "in_scope": false,
+      "top_score": 0.3074,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-17",
+      "question": "How do I learn to play the guitar?",
+      "in_scope": false,
+      "top_score": 0.2292,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-18",
+      "question": "What is the recipe for chocolate chip cookies?",
+      "in_scope": false,
+      "top_score": 0.3347,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-19",
+      "question": "How do I file my income tax return?",
+      "in_scope": false,
+      "top_score": 0.2357,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-20",
+      "question": "What is the tallest mountain in Africa?",
+      "in_scope": false,
+      "top_score": 0.314,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-21",
+      "question": "How do I clean a leather sofa?",
+      "in_scope": false,
+      "top_score": 0.3761,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-22",
+      "question": "What is a good name for a pet cat?",
+      "in_scope": false,
+      "top_score": 0.3924,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-23",
+      "question": "How do I install Windows updates?",
+      "in_scope": false,
+      "top_score": 0.1935,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-24",
+      "question": "What should I pack for a beach holiday?",
+      "in_scope": false,
+      "top_score": 0.3703,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-25",
+      "question": "How does a car engine work?",
+      "in_scope": false,
+      "top_score": 0.2252,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-26",
+      "question": "What is the history of the Roman Empire?",
+      "in_scope": false,
+      "top_score": 0.2655,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-27",
+      "question": "How do I write a cover letter?",
+      "in_scope": false,
+      "top_score": 0.2909,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-28",
+      "question": "What is the best way to learn French?",
+      "in_scope": false,
+      "top_score": 0.2294,
+      "answers": false,
+      "correct": true
+    },
+    {
+      "id": "off_topic-29",
+      "question": "How do I paint a bedroom wall?",
+      "in_scope": false,
+      "top_score": 0.2293,
+      "answers": false,
+      "correct": true
+    }
+  ]
+}

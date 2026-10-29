@@ -1,3 +1,5 @@
+import re
+
 import pytest
 from fastapi.testclient import TestClient
 
@@ -111,4 +113,6 @@ def test_frontend_is_served(client):
     r = client.get("/")
     assert r.status_code == 200
     assert "MedQuery" in r.text
-    assert client.get("/js/app.js").status_code == 200
+    asset = re.search(r'src="(/assets/[^"]+\.js)"', r.text)
+    assert asset, "index.html should reference the built bundle"
+    assert client.get(asset.group(1)).status_code == 200

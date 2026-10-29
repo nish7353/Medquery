@@ -8,6 +8,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
+from pydantic import AliasChoices, Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent
@@ -33,7 +34,9 @@ class Settings(BaseSettings):
 
     # --- BERT query understanding ---------------------------------------------
     # Any BERT-family encoder on the Hugging Face Hub (or a local directory).
-    query_model_name: str = "bert-base-uncased"
+    # The default is a 6-layer BERT trained for sentence similarity, the same model that
+    # builds the knowledge-base index, so its question embedding drives the search.
+    query_model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
     query_max_tokens: int = 128
     # Load models at startup (in a background thread) instead of on first use.
     preload_models: bool = False
@@ -55,10 +58,28 @@ class Settings(BaseSettings):
     # "extractive": BERT reading-comprehension model selects an answer span.
     # "evidence_only": no answer synthesis; the best passages are returned.
     answer_mode: Literal["extractive", "evidence_only"] = "extractive"
-    qa_model_name: str = "deepset/bert-base-cased-squad2"
+    # BioBERT fine-tuned on SQuAD 2.0: the best of three candidates on the COVID-QA dev split
+    # (see evaluation/results/reader-dev-*.json).
+    qa_model_name: str = "ktrapeznikov/biobert_v1.1_pubmed_squad_v2"
     # Extractive answers with a lower confidence are flagged as low confidence.
     qa_min_confidence: float = 0.15
     qa_max_answer_tokens: int = 64
+
+    # --- Multilingual voice and text (Sarvam AI) --------------------------------
+    # Read from SARVAM_API_KEY (or MEDQUERY_SARVAM_API_KEY). Empty -> English only, and the
+    # microphone falls back to the browser's own speech recognition.
+    sarvam_api_key: SecretStr = Field(
+        default=SecretStr(""), validation_alias=AliasChoices("SARVAM_API_KEY", "MEDQUERY_SARVAM_API_KEY"))
+    sarvam_base_url: str = "https://api.sarvam.ai"
+    sarvam_stt_model: str = "saaras:v4"
+    sarvam_translate_model: str = "mayura:v1"
+    sarvam_tts_model: str = "bulbul:v3"
+    # Empty -> Sarvam's default voice for the model.
+    sarvam_tts_speaker: str = ""
+    sarvam_timeout_seconds: float = 20.0
+    # Sarvam's real-time speech API accepts up to 30 s of audio; 30 s of 16 kHz WAV is ~1 MB.
+    max_audio_bytes: int = 5 * 1024 * 1024
+    max_speech_chars: int = 2_000
 
     # --- Persistence ----------------------------------------------------------
     database_path: str = str(BACKEND_DIR / "data" / "medquery.sqlite3")

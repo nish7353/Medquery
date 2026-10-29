@@ -163,7 +163,8 @@ def test_build_cli_import_stats_review_index(raw, monkeypatch, capsys):
     for dataset in ("medlineplus", "medquad", "bioasq", "pubmed"):
         assert dataset in out
     conn = connect(raw / build.DB_FILE, readonly=True)
-    assert conn.execute("SELECT COUNT(*) FROM medical_documents").fetchone()[0] == 5
+    # The two MedQuAD sub-collections hold the same answer text, which is stored once.
+    assert conn.execute("SELECT COUNT(*) FROM medical_documents").fetchone()[0] == 4
     conn.close()
 
     build.main(["import", "--kb-dir", kb, "--sources", "bioasq"])  # re-import is a no-op

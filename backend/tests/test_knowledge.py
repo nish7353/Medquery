@@ -10,8 +10,8 @@ import pytest
 
 from knowledge.build import DB_FILE
 from knowledge.chunking import chunk_blocks, html_to_blocks, paragraphs, strip_boilerplate
-from knowledge.db import Block, Record, connect, insert_record
-from knowledge.index import build_index
+from knowledge.db import Block, Record, connect, insert_record, remove_duplicates
+from knowledge.index import VectorIndex, build_index, prune_index
 from retrieval.adapters.medquery_kb import MedQueryKnowledgeBase
 from retrieval.base import RetrievalQuery, RetrievalStatus
 
@@ -109,3 +109,63 @@ def test_rejected_document_disappears_without_reindexing(kb):
 def test_missing_knowledge_base_fails_loudly(tmp_path):
     with pytest.raises(FileNotFoundError):
         MedQueryKnowledgeBase(str(tmp_path))
+
+
+def test_insert_skips_documents_with_the_same_content(tmp_path):
+    conn = connect(tmp_path / DB_FILE)
+    a = record("t:orig", "Alpha", "The alpha widget glows.")
+    copy = record("t:copy", "Alpha again?", "the ALPHA widget, glows")  # same words, other case and punctuation
+    assert insert_record(conn, a, chunk_blocks(a.blocks), "approved") is True
+    assert insert_record(conn, copy, chunk_blocks(copy.blocks), "approved") is False
+
+
+def test_remove_duplicates_keeps_preferred_dataset_and_prunes_index(tmp_path):
+    conn = connect(tmp_path / DB_FILE)
+    for r in (record("t:other", "Other", "Unrelated beta text.", dataset="secondary"),
+              record("t:orig", "Original", "Shared alpha text.", dataset="primary")):
+        insert_record(conn, r, chunk_blocks(r.blocks), "approved")
+    # Simulate a database built before fingerprints existed: an earlier-imported copy from a
+    # lower-priority dataset, with no hashes recorded.
+    conn.execute("UPDATE medical_documents SET content_hash = NULL")
+    conn.execute("INSERT INTO medical_documents (external_id, source_id, title, content, review_status) "
+                 "SELECT 't:copy', source_id, 'Copy', 'Shared alpha text.', 'approved' FROM medical_sources "
+                 "WHERE dataset = 'secondary' LIMIT 1")
+    conn.execute("INSERT INTO document_chunks (document_id, chunk_number, chunk_text) "
+                 "SELECT document_id, 0, 'Shared alpha text.' FROM medical_documents WHERE external_id = 't:copy'")
+    conn.commit()
+    build_index(tmp_path / DB_FILE, tmp_path / "index", "fake-model", encode=fake_encode)
+
+    assert remove_duplicates(conn, ("primary", "secondary")) == 1
+    left = {r[0] for r in conn.execute("SELECT external_id FROM medical_documents")}
+    assert left == {"t:orig", "t:other"}
+    live = np.array([r[0] for r in conn.execute("SELECT chunk_id FROM document_chunks")])
+    conn.close()
+    assert prune_index(tmp_path / "index", lambda ids: np.isin(ids, live)) == 1
+    assert VectorIndex.load(tmp_path / "index").meta["vectors"] == 2
+
+
+def test_faiss_and_numpy_search_agree():
+    pytest.importorskip("faiss")
+    rng = np.random.default_rng(0)
+    vectors = rng.normal(size=(500, 32)).astype("float32")
+    vectors /= np.linalg.norm(vectors, axis=1, keepdims=True)
+    ids = np.arange(1000, 1500)
+    fast, exact = VectorIndex(vectors, ids, {}), VectorIndex(vectors, ids, {}, use_faiss=False)
+    assert fast.backend == "faiss" and exact.backend == "numpy"
+    q = vectors[7]
+    assert [c for c, _ in fast.search(q, 10)] == [c for c, _ in exact.search(q, 10)]
+
+
+def test_retriever_reuses_matching_bert_embedding(kb):
+    def must_not_encode(texts):
+        raise AssertionError("adapter should reuse the pipeline's embedding")
+
+    vec = fake_encode(["alpha widget glow"])[0].tolist()
+    q = RetrievalQuery(original_text="x", normalized_text="x", top_k=3, embedding=vec, embedding_model="fake-model")
+    result = MedQueryKnowledgeBase(str(kb), encoder=must_not_encode).retrieve(q)
+    assert result.passages[0].source_id == "t:alpha"
+    assert "bert query embedding" in result.message
+
+    other = q.model_copy(update={"embedding_model": "some-other-model"})
+    result = MedQueryKnowledgeBase(str(kb), encoder=fake_encode).retrieve(other)
+    assert "adapter embedding" in result.message

@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { test } from "node:test";
+import { test } from "vitest";
 
 import {
   confidenceLabel,
@@ -11,7 +11,7 @@ import {
   safeUrl,
   statusMeta,
   validateQuestion,
-} from "../js/format.js";
+} from "../src/lib/format.js";
 
 test("escapeHtml neutralises markup", () => {
   assert.equal(escapeHtml(`<img src=x onerror="a('b')">&`), "&lt;img src=x onerror=&quot;a(&#39;b&#39;)&quot;&gt;&amp;");

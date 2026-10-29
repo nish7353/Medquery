@@ -3,7 +3,9 @@ fastapi==0.115.12
 uvicorn[standard]==0.34.2
 pydantic==2.11.4
 pydantic-settings==2.9.1
+# Voice uploads (multipart form data) and calls to the Sarvam AI API
+python-multipart==0.0.20
+httpx==0.28.1
 
 # Testing
 pytest==8.3.5
-httpx==0.28.1

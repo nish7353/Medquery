@@ -38,6 +38,8 @@ class RetrievalQuery(BaseModel):
     question_type: str = "general"
     # Mean-pooled BERT embedding of the question; None if the encoder is unavailable.
     embedding: list[float] | None = None
+    # Model that produced `embedding`, so an adapter can check it matches its index.
+    embedding_model: str | None = None
     top_k: int = 5
 
 

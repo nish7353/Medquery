@@ -3,9 +3,11 @@
     MEDQUERY_KB_ADAPTER=retrieval.adapters.medquery_kb:MedQueryKnowledgeBase
     MEDQUERY_KB_CONNECTION=            # optional: knowledge-base folder (default backend/data/kb)
 
-Search is semantic: the question is embedded with the same sentence-transformers
-model that built the index, the vector index returns the nearest chunks, and each chunk is
-re-checked in SQLite so only currently approved documents and sources are used.
+Search is semantic: the question is embedded with the same BERT-family model that built
+the index (normally the pipeline's own BERT query embedding is reused; the adapter only
+encodes the question itself if the pipeline used a different model), FAISS returns the
+nearest chunks, and each chunk is re-checked in SQLite so only currently approved documents
+and sources are used.
 """
 
 from pathlib import Path
@@ -31,21 +33,29 @@ class MedQueryKnowledgeBase(Retriever):
             raise FileNotFoundError(f"{self.db_path} not found. Run `python -m knowledge.build all` first.")
         self.index = VectorIndex.load(kb_dir / "index")
         self.meta = self.index.meta
+        # Only needed when the pipeline's encoder differs from the index's model, so it is
+        # loaded on first use rather than warmed up: a second background load would hold a
+        # duplicate model in memory and race the query encoder's import of transformers.
         self.encoder = options.get("encoder") or LazyModel(
             "embedding", self.meta["embedding_model"], lambda: sentence_transformer_encoder(self.meta["embedding_model"])
         )
-        if isinstance(self.encoder, LazyModel):
-            self.encoder.warm_up_in_background()
 
-    def retrieve(self, query: RetrievalQuery) -> RetrievalResult:
+    def query_vector(self, query: RetrievalQuery) -> tuple[list[float], str]:
+        """The pipeline's BERT embedding when it comes from the index's model, else our own encoding."""
+        if (query.embedding and query.embedding_model == self.meta["embedding_model"]
+                and len(query.embedding) == self.meta["dimension"]):
+            return query.embedding, "bert_query_embedding"
         encode = self.encoder.get() if isinstance(self.encoder, LazyModel) else self.encoder
         if encode is None:
             raise RuntimeError(f"Embedding model unavailable: {self.encoder.error}")
+        return encode([query.normalized_text or query.original_text])[0], "adapter_embedding"
 
-        vector = encode([query.normalized_text or query.original_text])[0]
+    def retrieve(self, query: RetrievalQuery) -> RetrievalResult:
+        vector, how = self.query_vector(query)
+        message = f"Searched with {how.replace('_', ' ')} ({self.index.backend})"
         hits = self.index.search(vector, query.top_k * OVERFETCH)
         if not hits:
-            return RetrievalResult(status=RetrievalStatus.NO_RESULTS, adapter=self.name)
+            return RetrievalResult(status=RetrievalStatus.NO_RESULTS, adapter=self.name, message=message)
 
         conn = connect(self.db_path, readonly=True)
         try:
@@ -78,4 +88,4 @@ class MedQueryKnowledgeBase(Retriever):
             if len(passages) == query.top_k:
                 break
         status = RetrievalStatus.OK if passages else RetrievalStatus.NO_RESULTS
-        return RetrievalResult(status=status, passages=passages, adapter=self.name)
+        return RetrievalResult(status=status, passages=passages, adapter=self.name, message=message)

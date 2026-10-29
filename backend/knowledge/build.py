@@ -6,6 +6,7 @@ Run from the `backend` folder:
     python -m knowledge.build download             # fetch raw datasets into data/kb/raw
     python -m knowledge.build import --sources medlineplus,medquad
     python -m knowledge.build index                # (re)build the vector index
+    python -m knowledge.build dedupe               # remove duplicate documents (no re-embedding)
     python -m knowledge.build stats
     python -m knowledge.build review --document 42 --status rejected
     python -m knowledge.build review --dataset bioasq --status pending
@@ -13,14 +14,17 @@ Run from the `backend` folder:
 
 import argparse
 import logging
+import shutil
 import sys
 from pathlib import Path
+
+import numpy as np
 
 from app.config import BACKEND_DIR
 from knowledge import sources
 from knowledge.chunking import chunk_blocks, strip_boilerplate
-from knowledge.db import REVIEW_STATUSES, connect, insert_record
-from knowledge.index import DEFAULT_EMBEDDING_MODEL, build_index
+from knowledge.db import REVIEW_STATUSES, connect, insert_record, remove_duplicates
+from knowledge.index import DEFAULT_EMBEDDING_MODEL, build_index, prune_index
 
 logger = logging.getLogger("knowledge.build")
 
@@ -71,8 +75,24 @@ def cmd_import(kb_dir: Path, datasets: list[str], status: str) -> None:
                 conn.commit()
                 logger.info("%s: %d documents imported...", name, added)
         conn.commit()
-        logger.info("%s: %d imported, %d already present, %d rejected (missing fields)", name, added, skipped, rejected)
+        logger.info("%s: %d imported, %d already present or duplicate, %d rejected (missing fields)",
+                    name, added, skipped, rejected)
     conn.close()
+
+
+def cmd_dedupe(kb_dir: Path) -> None:
+    db, _, index_dir = paths(kb_dir)
+    backup = db.with_suffix(".sqlite3.bak")
+    shutil.copy2(db, backup)
+    logger.info("Backed up the database to %s", backup.name)
+    conn = connect(db)
+    removed = remove_duplicates(conn, DATASETS)
+    live = np.array([r[0] for r in conn.execute("SELECT chunk_id FROM document_chunks")], dtype="int64")
+    conn.close()
+    logger.info("Removed %d duplicate documents", removed)
+    if (index_dir / "meta.json").exists():
+        pruned = prune_index(index_dir, lambda ids: np.isin(ids, live))
+        logger.info("Removed %d vectors of deleted chunks from the index", pruned)
 
 
 def cmd_stats(kb_dir: Path) -> None:
@@ -117,7 +137,7 @@ def cmd_review(kb_dir: Path, status: str, document: int | None, dataset: str | N
 def main(argv: list[str] | None = None) -> None:
     p = argparse.ArgumentParser(prog="python -m knowledge.build", description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("command", choices=["all", "download", "import", "index", "stats", "review"])
+    p.add_argument("command", choices=["all", "download", "import", "dedupe", "index", "stats", "review"])
     p.add_argument("--kb-dir", type=Path, default=DEFAULT_KB_DIR)
     p.add_argument("--sources", default=",".join(DATASETS), help=f"comma-separated subset of {', '.join(DATASETS)}")
     p.add_argument("--status", choices=REVIEW_STATUSES, default="approved",
@@ -139,10 +159,12 @@ def main(argv: list[str] | None = None) -> None:
         cmd_download(args.kb_dir, datasets, args.pubmed_per_topic)
     if args.command in ("all", "import"):
         cmd_import(args.kb_dir, datasets, args.status)
+    if args.command == "dedupe":
+        cmd_dedupe(args.kb_dir)
     if args.command in ("all", "index"):
         n = build_index(db, index_dir, args.model)
         logger.info("Index built: %d vectors in %s", n, index_dir)
-    if args.command in ("all", "stats", "import", "index"):
+    if args.command in ("all", "stats", "import", "dedupe", "index"):
         cmd_stats(args.kb_dir)
     if args.command == "review":
         if (args.document is None) == (args.dataset is None):

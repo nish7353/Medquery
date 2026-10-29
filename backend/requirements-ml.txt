@@ -3,3 +3,8 @@
 #   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
 torch==2.5.1
 transformers==4.46.3
+# Knowledge base: embeddings, FAISS vector search, dataset files
+sentence-transformers==3.3.1
+faiss-cpu==1.15.1
+pyarrow==18.1.0
+numpy==2.5.4

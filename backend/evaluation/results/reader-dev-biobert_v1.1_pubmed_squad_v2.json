@@ -1,0 +1,3614 @@
+{
+  "task": "reader",
+  "split": "dev",
+  "run_at": "2026-10-29T15:06:56+00:00",
+  "summary": {
+    "questions": 400,
+    "ExactMatch": 0.37,
+    "F1": 0.6059,
+    "no_answer_rate": 0.095,
+    "qa_model": "ktrapeznikov/biobert_v1.1_pubmed_squad_v2"
+  },
+  "rows": [
+    {
+      "id": "278",
+      "question": "How many children were infected by HIV-1 in 2008-2009, worldwide?",
+      "gold": "more than 400,000 children were infected worldwide, mostly through MTCT and 90% of them lived in sub-Saharan Africa.",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "316",
+      "question": "What is the role of C-C Motif Chemokine Ligand 3 Like 1 (CCL3L1) in mother to child transmission of HIV-1?",
+      "gold": "High copy numbers of CCL3L1, a potent HIV-1 suppressive ligand for CCR5, are associated with higher chemokine production and lower risk of MTCT of HIV-1 among South African infants",
+      "prediction": "suppressive ligand for CCR5",
+      "confidence": 0.1092,
+      "em": 0.0,
+      "f1": 0.25
+    },
+    {
+      "id": "321",
+      "question": "How can CCR5's effect in HIV-1 transmission be reduced?",
+      "gold": "The 32-pb deletion polymorphism in CCR5 has be shown to protect from vertical transmission of HIV-1",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "568",
+      "question": "What is IFITM?",
+      "gold": "interferon-induced transmembrane",
+      "prediction": "interferon-induced transmembrane",
+      "confidence": 0.7987,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "569",
+      "question": "How many cysteine residues are contained in the first transmembrane domain of IFITM3?",
+      "gold": "three",
+      "prediction": "three",
+      "confidence": 0.8478,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "571",
+      "question": "What interaction is inhibited by the presence of 2-bromopalmitic acid (2BP)?",
+      "gold": "IFITM5 with FKBP11",
+      "prediction": "S-palmitoylation",
+      "confidence": 0.5386,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "573",
+      "question": "What regulates the antiviral activity of IFITM3?",
+      "gold": "S-palmitoylation on the protein",
+      "prediction": "S-palmitoylation",
+      "confidence": 0.6971,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "576",
+      "question": "What is the amino acid similarity between IFITM5 and the other IFITM proteins?",
+      "gold": "~ 65% similarity",
+      "prediction": "~ 65%",
+      "confidence": 0.4876,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "580",
+      "question": "What amino acid might be involved in calcium binding in the C-terminal region of a protein?",
+      "gold": "aspartate",
+      "prediction": "aspartate-rich domain",
+      "confidence": 0.7736,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "919",
+      "question": "How many nucleotides does bovine coronavirus contain?",
+      "gold": "30,847 nucleotides",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "920",
+      "question": "What is the size of the orf1ab gene in bovine coronavirus?",
+      "gold": "20kb",
+      "prediction": "20kb nucleotides",
+      "confidence": 0.5988,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "1658",
+      "question": "What is a significant cause of Influenze like illness among healthy adolescents and adults presenting for medical evaluation?",
+      "gold": "HCoV",
+      "prediction": "HCoV",
+      "confidence": 0.9497,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1660",
+      "question": "Which Human Coronavirus showed species specific clinical characteristics of its infection?",
+      "gold": "HCoV‐HKU1",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1717",
+      "question": "What causes the outbreak of SARS and MERS.",
+      "gold": "Highly virulent species of HCoV",
+      "prediction": "Highly virulent species of HCoV",
+      "confidence": 0.7437,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1718",
+      "question": "What is the case fatality rate of SARS and MERS?",
+      "gold": "ranged from 14% to 45%",
+      "prediction": "14% to 45%",
+      "confidence": 0.8284,
+      "em": 0.0,
+      "f1": 0.75
+    },
+    {
+      "id": "2996",
+      "question": "What is required for a Hepatitis B infection in cells?",
+      "gold": "both intracellular and cell-surface factors",
+      "prediction": "intracellular and cell-surface factors",
+      "confidence": 0.3453,
+      "em": 0.0,
+      "f1": 0.8889
+    },
+    {
+      "id": "2997",
+      "question": "What regulates the broad, but less specific, virus-cell interaction in a hepatitis B infection?",
+      "gold": "heparan sulfates in the membrane proteins",
+      "prediction": "heparan sulfates",
+      "confidence": 0.3781,
+      "em": 0.0,
+      "f1": 0.5714
+    },
+    {
+      "id": "2999",
+      "question": "Where is NTCP located in the body?",
+      "gold": "lateral surface (canalicular) of hepatocytes",
+      "prediction": "lateral surface (canalicular) of hepatocytes",
+      "confidence": 0.1266,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3001",
+      "question": "Is NTCP sufficient to allow HBV infection?",
+      "gold": "not sufficient",
+      "prediction": "NTCP itself is not",
+      "confidence": 0.1791,
+      "em": 0.0,
+      "f1": 0.3333
+    },
+    {
+      "id": "3002",
+      "question": "Why is NTCP thought to not be sufficient for HBV infection?",
+      "gold": "the majority of HepaRG cells were found to express NPCT but not to be infected",
+      "prediction": "the majority of HepaRG cells were found to express NPCT but not to be infected",
+      "confidence": 0.3464,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3003",
+      "question": "What kinds of viruses are Japanese encephalitis virus(JEV), tick-borne encephalitis virus(TBEV), eastern equine encephalitis virus (EEEV), sindbis virus(SV), and dengue virus(DV)?",
+      "gold": "arboviruses",
+      "prediction": "arboviruses",
+      "confidence": 0.9705,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3008",
+      "question": "How was the ELISA assay validated?",
+      "gold": "using cultured viruses and inoculated chicken eggs with patient sera",
+      "prediction": "using cultured viruses and inoculated chicken eggs with patient sera",
+      "confidence": 0.4624,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3009",
+      "question": "What capture antibodies were used in the study?",
+      "gold": "4D5, 2B5, 1F1, 2B8, 4F9, and 4E11",
+      "prediction": "4D5, 2B5, 1F1, 2B8, 4F9, and 4E11",
+      "confidence": 0.9522,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3011",
+      "question": "How was the proper spotting concentration determined?",
+      "gold": "combination of minimized cross reaction and higher signal intensity",
+      "prediction": "a combination of minimized cross reaction and higher signal intensity",
+      "confidence": 0.3483,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3012",
+      "question": "How was cross reaction detection determined?",
+      "gold": "by applying JEV, YF, and DV cultures",
+      "prediction": "by applying JEV, YF, and DV cultures",
+      "confidence": 0.4945,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3013",
+      "question": "How was the ELISA-array assay validated?",
+      "gold": "using cultured viruses and inoculated chicken eggs with patient sera",
+      "prediction": "using cultured viruses and inoculated chicken eggs with patient sera",
+      "confidence": 0.5054,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3015",
+      "question": "What is the population of Shandong province?",
+      "gold": "94 million",
+      "prediction": "94 million",
+      "confidence": 0.9641,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3016",
+      "question": "What was the purpose of this study?",
+      "gold": "estimate the TB prevalence in Shandong",
+      "prediction": "to estimate the TB prevalence in Shandong based on the 2010 survey",
+      "confidence": 0.1209,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "3017",
+      "question": "What was the age range for the people surveyed?",
+      "gold": "15 years old or above",
+      "prediction": "15 years old or above",
+      "confidence": 0.5496,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3018",
+      "question": "How was the survey designed?",
+      "gold": "in accordance with WHO recommendations",
+      "prediction": "in accordance with WHO recommendations",
+      "confidence": 0.4894,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3019",
+      "question": "Was was the sample size?",
+      "gold": "52500",
+      "prediction": "A sample size of 52500 adults (≧15 years old)",
+      "confidence": 0.2345,
+      "em": 0.0,
+      "f1": 0.2222
+    },
+    {
+      "id": "3021",
+      "question": "How many people were in a community cluster?",
+      "gold": "1250 to 1750",
+      "prediction": "1250 to 1750 adults",
+      "confidence": 0.3245,
+      "em": 0.0,
+      "f1": 0.8571
+    },
+    {
+      "id": "3024",
+      "question": "Who conducted the study?",
+      "gold": "clinicians, public health doctors, radiologists, laboratory technicians and nurses",
+      "prediction": "clinicians, public health doctors, radiologists, laboratory technicians and nurses",
+      "confidence": 0.2503,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3025",
+      "question": "What medium was used to collect the sputum samples?",
+      "gold": "Löwenstein-Jensen medium",
+      "prediction": "Löwenstein-Jensen medium",
+      "confidence": 0.553,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3027",
+      "question": "What was the average age of a study participant?",
+      "gold": "46 years",
+      "prediction": "46",
+      "confidence": 0.532,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "3028",
+      "question": "What was the prevalence rate in Shandong in 2010 for sputum positive cases of tuberculosis?",
+      "gold": "22.1",
+      "prediction": "22.1",
+      "confidence": 0.6131,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3030",
+      "question": "How many cases of sputum positive tuberculosis patients had no persistent cough?",
+      "gold": "45%",
+      "prediction": "45%",
+      "confidence": 0.6662,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3031",
+      "question": "How many tuberculosis patients in Shandong were over 65 years old?",
+      "gold": "over half",
+      "prediction": "over half",
+      "confidence": 0.5185,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3042",
+      "question": "At what temperatures was the assay completed?",
+      "gold": "32uC, 37uC, 42uC",
+      "prediction": "32uC, 37uC, 42uC",
+      "confidence": 0.7938,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3043",
+      "question": "What criteria sets the guideline for drug-like properties?",
+      "gold": "Lipinski's ''Rule of five''",
+      "prediction": "Rule of five",
+      "confidence": 0.5186,
+      "em": 0.0,
+      "f1": 0.8571
+    },
+    {
+      "id": "1612",
+      "question": "What method is useful in administering small molecules for systemic delivery to the body?",
+      "gold": "Intranasal",
+      "prediction": "Intranasal entry",
+      "confidence": 0.8202,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "1615",
+      "question": "Why is the nasal mucosa useful in the delivery of small molecules into the body?",
+      "gold": "the surface area can result in rapid absorption of the medication into the blood",
+      "prediction": "highly vascularized",
+      "confidence": 0.5639,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1618",
+      "question": "How are siRNAs typically delivered for systemic effect?",
+      "gold": "intratracheal or intranasal delivery",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1619",
+      "question": "What structures form the human airway?",
+      "gold": "respiratory bronchioles, alveolar ducts, and alveolar sacs",
+      "prediction": "respiratory bronchioles, alveolar ducts, and alveolar sacs",
+      "confidence": 0.9331,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1620",
+      "question": "What size of particle has been shown to be most effective in the delivery to the lower airway?",
+      "gold": "1-5 μm",
+      "prediction": "1-5 μm",
+      "confidence": 0.5917,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1621",
+      "question": "What are the essential conditions in siRNA delivery to effectively produce gene silencing in the lungs?",
+      "gold": "delivered to their site of action, be stable, enter the target cells, and be present in the cytoplasm at sufficient concentration",
+      "prediction": "siRNAs must be delivered to their site of action, be stable, enter the target cells, and be present in the cytoplasm at sufficient concentration",
+      "confidence": 0.1545,
+      "em": 0.0,
+      "f1": 0.9268
+    },
+    {
+      "id": "1623",
+      "question": "How many open reading frames are in the SAIBK gene?",
+      "gold": "10",
+      "prediction": "10",
+      "confidence": 0.7613,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "257",
+      "question": "How many surgical masks or respirators have past studies projected will be required for a pandemic in the United States?",
+      "gold": "an estimated 7.3 billion",
+      "prediction": "7.3 billion",
+      "confidence": 0.7211,
+      "em": 0.0,
+      "f1": 0.8
+    },
+    {
+      "id": "248",
+      "question": "What is the acronym MERS-CoV?",
+      "gold": "Middle East respiratory syndrome coronavirus",
+      "prediction": "Middle East respiratory syndrome coronavirus",
+      "confidence": 0.9472,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "249",
+      "question": "What are the critical factors that determine the effect of an epidemic?",
+      "gold": "Transmissibility and severity",
+      "prediction": "Transmissibility and severity",
+      "confidence": 0.9713,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "251",
+      "question": "What influenza virus was identified in China in 2013?",
+      "gold": "H7N9",
+      "prediction": "H7N9",
+      "confidence": 0.7828,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "252",
+      "question": "What past research has been done on severe, single-wave pandemics?",
+      "gold": "After a new influenza virus (H7N9) was identified in China in 2013, a series of modeling articles described the effect of, and level of preparedness for, a severe, single-wave pandemic in the United States.",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "255",
+      "question": "What is the estimated R0 of COVID-19?",
+      "gold": "2.2",
+      "prediction": "2.2.9",
+      "confidence": 0.2502,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "5193",
+      "question": "How is exhaled breath condensate used in viral research?",
+      "gold": "the isolation of respiratory viruses",
+      "prediction": "an inventive and novel method",
+      "confidence": 0.1439,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "5194",
+      "question": "How many patients were i this study?",
+      "gold": "102",
+      "prediction": "102",
+      "confidence": 0.8605,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5195",
+      "question": "What was the conclusion of this study?",
+      "gold": "EBC collection using the RTube™ is not reliable for diagnosis of respiratory infections",
+      "prediction": "not reliable for diagnosis of respiratory infections.",
+      "confidence": 0.1497,
+      "em": 0.0,
+      "f1": 0.7368
+    },
+    {
+      "id": "5200",
+      "question": "Why is EBC an attractive method for screening?",
+      "gold": "easy to perform and can be conducted in a home environment",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "502",
+      "question": "What is the leading cause of death among children after the age of 1 month?",
+      "gold": "Pneumonia remains the leading cause of death in children outside the neonatal period,",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "515",
+      "question": "Case Fatality Rates for Childhood Pneumonia in high income vs low and middle income countries.",
+      "gold": "the case fatality rate is estimated to be almost 10-fold higher in low-and middle-income countries as compared to high-income countries",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "516",
+      "question": "How can childhood pneumonia affect the subsequent health of a person?",
+      "gold": "Early life pneumonia can impair longterm lung health by decreasing lung function [6] . Severe or recurrent pneumonia can have a worse effect on lung function; increasing evidence suggests that chronic obstructive pulmonary disease might be related to early childhood pneumonia",
+      "prediction": "decreasing lung function",
+      "confidence": 0.1758,
+      "em": 0.0,
+      "f1": 0.1429
+    },
+    {
+      "id": "534",
+      "question": "What chest diseases and pneumonia were identified as leading causes prior to  the availability of vaccines?",
+      "gold": "prior to availability of new conjugate vaccines confirmed S. pneumoniae and H. influenzae type B as the most important bacterial causes of pneumonia, with Staphylococcus aureus and Klebsiella pneumoniae associated with some severe cases. Respiratory syncytial virus was the leading viral cause, identified in 15-40% of pneumonia cases, followed by influenza A and B, parainfluenza, human metapneumovirus and adenovirus",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "539",
+      "question": "What is the strongest risk factor for childhood pneumonia?",
+      "gold": "The single strongest risk factor for pneumonia is HIV infection, which is especially prevalent in children in sub-Saharan Africa. HIV-infected children have 6 times increased odds of developing severe pneumonia or of death compared to HIV-uninfected children",
+      "prediction": "HIV infection",
+      "confidence": 0.9057,
+      "em": 0.0,
+      "f1": 0.1053
+    },
+    {
+      "id": "4573",
+      "question": "How is the term end point consolidation described  with regard to pneumonia diagnosis?",
+      "gold": "as a dense or fluffy opacity that occupies a portion or whole of a lobe, or the entire lung.",
+      "prediction": "a dense or fluffy opacity that occupies a portion or whole of a lobe, or the entire lung",
+      "confidence": 0.4082,
+      "em": 0.0,
+      "f1": 0.9655
+    },
+    {
+      "id": "5217",
+      "question": "What factors make H5N1 a worldwide threat to public health?",
+      "gold": "rapid spread and high pathogenicity",
+      "prediction": "rapid spread and high pathogenicity",
+      "confidence": 0.7379,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5218",
+      "question": "What are the symptoms of H5N1 infection in humans?",
+      "gold": "fever, encephalitis, pneumonia, and severe acute respiratory syndrome (SARS)",
+      "prediction": "fever, encephalitis, pneumonia, and severe acute respiratory syndrome (SARS)",
+      "confidence": 0.4555,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5219",
+      "question": "Name some medications used to treat influenza.",
+      "gold": "zanamivir (Relenza) and oseltamivir (Tamiflu)",
+      "prediction": "zanamivir (Relenza) and oseltamivir (Tamiflu)",
+      "confidence": 0.5501,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5220",
+      "question": "Why have antiretrovirals medications had limited benefit in treating influenza?",
+      "gold": "drug-resistance and frequent antigenic mutation",
+      "prediction": "drug-resistance and frequent antigenic mutation",
+      "confidence": 0.5982,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5223",
+      "question": "How do the polysaccharides in plants effect the immune response?",
+      "gold": "enhance the secretion of cytokines and chemokines, such as TNF-, IL-6, IL-8, and IL-12",
+      "prediction": "enhance the secretion of cytokines and chemokines, such as TNF-, IL-6, IL-8, and IL-12 [11] . This immunomodulatory",
+      "confidence": 0.1721,
+      "em": 0.0,
+      "f1": 0.8966
+    },
+    {
+      "id": "327",
+      "question": "What types of acute respiratory infections can be screened and diagnosed with multiplex PCR?",
+      "gold": "influenza and parainfluenza viruses, RSV, adenovirus, rhinovirus, human metapneumovirus, enterovirus, bocavirus and coronavirus",
+      "prediction": "influenza and parainfluenza viruses, RSV, adenovirus, rhinovirus, human metapneumovirus, enterovirus, bocavirus and coronavirus",
+      "confidence": 0.3714,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "476",
+      "question": "What mechanism is responsible for the creation of diversified repertoire for antibodies?",
+      "gold": "somatic rearrangement during B cell differentiation was responsible for antibody diversification",
+      "prediction": "somatic rearrangement",
+      "confidence": 0.5703,
+      "em": 0.0,
+      "f1": 0.3077
+    },
+    {
+      "id": "490",
+      "question": "How are the studies on B-cells helping the development of a universal influenza vaccine?",
+      "gold": "Influenza also performs fusion through the stem region of the hemagglutinin protein, and the identification of B cells that target this relatively conserved site has spurred research on the development of a universal influenza vaccine (",
+      "prediction": "the identification of B cells that target this relatively conserved site",
+      "confidence": 0.0875,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "557",
+      "question": "When was the  Middle East Respiratory Syndrome Coronavirus isolated first?",
+      "gold": "(MERS-CoV) was first isolated in 2012, in a 60-year-old man who died in Jeddah, KSA due to severe acute pneumonia and multiple organ failure",
+      "prediction": "2012",
+      "confidence": 0.972,
+      "em": 0.0,
+      "f1": 0.0833
+    },
+    {
+      "id": "560",
+      "question": "Which is the source animal for the MERS-COV?",
+      "gold": "Dromedary camels are the major animal source of MERS-CoV transmission to humans.",
+      "prediction": "Dromedary camels",
+      "confidence": 0.985,
+      "em": 0.0,
+      "f1": 0.3077
+    },
+    {
+      "id": "5235",
+      "question": "How does gemcitabine disrupt viral activity?",
+      "gold": "by targeting the salvage pathway of pyrimidine biosynthesis",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1632",
+      "question": "What is the structure of the CD40 Ligand?",
+      "gold": "a sandwiched extracellular structure composed of a β-sheet, α-helix loop, and a β-sheet",
+      "prediction": "32-39 kDa type II membrane glycoprotein that was initially identified as a surface marker exclusive to activated CD4 + T cells [21, 22] . It is a member of the TNF superfamily consisting of a sandwiched extracellular structure",
+      "confidence": 0.1256,
+      "em": 0.0,
+      "f1": 0.1905
+    },
+    {
+      "id": "330",
+      "question": "What immune cells are primarily involved in eliminating virus-infected cells?",
+      "gold": "NK cells (CD3-/CD16+/CD56+)",
+      "prediction": "NK cells",
+      "confidence": 0.8057,
+      "em": 0.0,
+      "f1": 0.8
+    },
+    {
+      "id": "331",
+      "question": "What molecules have been shown to hinder T cell responses to viral infections?",
+      "gold": "Excessive reactive oxygen species (ROS)",
+      "prediction": "Excessive reactive oxygen species",
+      "confidence": 0.2685,
+      "em": 0.0,
+      "f1": 0.8889
+    },
+    {
+      "id": "1596",
+      "question": "What traits should the new Director General of the WHO have?",
+      "gold": "open-minded and creative",
+      "prediction": "proven leader and advocate",
+      "confidence": 0.4007,
+      "em": 0.0,
+      "f1": 0.2857
+    },
+    {
+      "id": "1627",
+      "question": "What is the long-term risk of chronic hepatitis C infection?",
+      "gold": "cirrhosis and hepatocellular carcinoma",
+      "prediction": "cirrhosis and hepatocellular carcinoma",
+      "confidence": 0.3425,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "2130",
+      "question": "What is hepcidin?",
+      "gold": "low molecular weight, antimicrobial peptide hormone",
+      "prediction": "a part of the natural defense mechanism",
+      "confidence": 0.4774,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "2132",
+      "question": "What organ produces hepcidin?",
+      "gold": "liver",
+      "prediction": "liver",
+      "confidence": 0.5953,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "2135",
+      "question": "Is hepcidin toxic?",
+      "gold": "potentially toxic",
+      "prediction": "it limits the amount of Fe that can be utilized by pathogens",
+      "confidence": 0.1923,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "2137",
+      "question": "How does hepcidin work in the duodenum?",
+      "gold": "control of excessive Fe absorption",
+      "prediction": "natural defense mechanism",
+      "confidence": 0.1467,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "2138",
+      "question": "How does hepcidin affect macrophages?",
+      "gold": "regulation of Fe release",
+      "prediction": "regulation of Fe release",
+      "confidence": 0.1505,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "2139",
+      "question": "What leads to oxidative stress in the body?",
+      "gold": "production of ROS",
+      "prediction": "Fe also participates in redox reactions",
+      "confidence": 0.3165,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "3032",
+      "question": "What is Acute hemorrhagic encephalomyelitis?",
+      "gold": "a rare form of acute disseminated encephalomyelitis",
+      "prediction": "acute disseminated encephalomyelitis",
+      "confidence": 0.1194,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "3039",
+      "question": "Compounds from what framework have shown promising anticancer and antiviral properties?",
+      "gold": "quinazolin-4-one",
+      "prediction": "quinazolin-4-one",
+      "confidence": 0.698,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3040",
+      "question": "The replication of what virus is strongly inhibited by 2-(4-hydroxybenzyl)quinazolin-4(3H)-one (1)?",
+      "gold": "tobacco mosaic virus",
+      "prediction": "tobacco mosaic virus",
+      "confidence": 0.5799,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3270",
+      "question": "When was HBoV1 first identified?",
+      "gold": "2005",
+      "prediction": "2005",
+      "confidence": 0.9474,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4060",
+      "question": "What is the molecular structure of the Human metapneumovirus (HMPV)?",
+      "gold": "single-stranded RNA virus",
+      "prediction": "The HMPV genome is approximately 13 kb and comprises eight open reading frames",
+      "confidence": 0.0343,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "4061",
+      "question": "What virus is closely related to the human respiratory syncytial virus (RSV)?",
+      "gold": "Human metapneumovirus (HMPV)",
+      "prediction": "Human metapneumovirus",
+      "confidence": 0.5281,
+      "em": 0.0,
+      "f1": 0.8
+    },
+    {
+      "id": "4064",
+      "question": "How many open reading frames are in the HMPV genome?",
+      "gold": "eight",
+      "prediction": "eight",
+      "confidence": 0.8657,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4078",
+      "question": "How many control samples were used in this study?",
+      "gold": "27",
+      "prediction": "27",
+      "confidence": 0.2971,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4079",
+      "question": "What was the prevalence of coinfection?",
+      "gold": "4.1% of cases",
+      "prediction": "4.1%",
+      "confidence": 0.9471,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "4082",
+      "question": "What was the definition for an immunocompromised state in this study?",
+      "gold": "corticosteroid treatment, solid organ or hematopoietic stem cell recipient, or chemotherapy for an underlying malignancy during the past 6 months",
+      "prediction": "if the patients met one of the following conditions",
+      "confidence": 0.4774,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "4083",
+      "question": "What was the length of the study?",
+      "gold": "9-month",
+      "prediction": "9-month",
+      "confidence": 0.8537,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4084",
+      "question": "How many patients had acute RTIs?",
+      "gold": "263",
+      "prediction": "263",
+      "confidence": 0.5781,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4085",
+      "question": "What was the most frequent coinfection?",
+      "gold": "rhinovirus",
+      "prediction": "rhinovirus",
+      "confidence": 0.4606,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5201",
+      "question": "What health regulations were changes due to the outbreak of C. burnetti?",
+      "gold": "forbid the display of sheep in the latter third of their pregnancy and require regular testing of animals for C. burnetii in petting zoos",
+      "prediction": "forbid the display of sheep in the latter third of their pregnancy and require regular testing of animals for C. burnetii in petting zoos",
+      "confidence": 0.0606,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5202",
+      "question": "What was the median seropresence of C. burnetti in sheep flocks not linked to human outbreaks?",
+      "gold": "1%",
+      "prediction": "1%",
+      "confidence": 0.9103,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5204",
+      "question": "What was the interquartile range of the incubation period?",
+      "gold": "16 to 24 days",
+      "prediction": "16 to 24 days",
+      "confidence": 0.8253,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5209",
+      "question": "What is the primary reservoir for Coxiella burnetii?",
+      "gold": "sheep, goat and cattle",
+      "prediction": "sheep, goat and cattle",
+      "confidence": 0.8529,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3688",
+      "question": "How is the HeteSim measured used?",
+      "gold": "calculate the relatedness of objects with the same or different types",
+      "prediction": "to calculate the relatedness of objects with the same or different types in a uniform framework",
+      "confidence": 0.3674,
+      "em": 0.0,
+      "f1": 0.8182
+    },
+    {
+      "id": "3690",
+      "question": "What is the function of MALAT1?",
+      "gold": "regulates cell cycle and survival",
+      "prediction": "regulates cell cycle",
+      "confidence": 0.1945,
+      "em": 0.0,
+      "f1": 0.75
+    },
+    {
+      "id": "593",
+      "question": "What test can detect reduced anticoccidial efficacy in the field?",
+      "gold": "faecal oocyst count reduction test (FOCRT)",
+      "prediction": "faecal oocyst count reduction test",
+      "confidence": 0.4931,
+      "em": 0.0,
+      "f1": 0.9091
+    },
+    {
+      "id": "595",
+      "question": "What is toltrazuril used to treat?",
+      "gold": "anticoccidial",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "581",
+      "question": "What is multiple evanescent white dot syndrome?",
+      "gold": "a rare, sudden onset of unilateral chorioretinopathy",
+      "prediction": "a rare, sudden onset of unilateral chorioretinopathy",
+      "confidence": 0.6179,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "583",
+      "question": "What types of viruses can be diagnosed through serological testing?",
+      "gold": "herpes simplex virus (HSV) I-II, varicella zoster virus (VZV), West Nile virus, coxsackievirus, echovirus (subgroup of enterovirus), and corona virus",
+      "prediction": "herpes simplex virus (HSV) I-II, varicella zoster virus (VZV), West Nile virus, coxsackievirus, echovirus (subgroup of enterovirus), and corona virus",
+      "confidence": 0.5853,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1598",
+      "question": "What was the most common virus detected in community members in this sample?",
+      "gold": "Coronavirus OC43",
+      "prediction": "Coronavirus OC43",
+      "confidence": 0.9227,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1599",
+      "question": "How bad is the burden of disease in developing countries?",
+      "gold": "2-5 times higher than in developed countries",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1600",
+      "question": "Where do the majority of all infectious disease outbreaks happen?",
+      "gold": "Africa",
+      "prediction": "continent of Africa",
+      "confidence": 0.5356,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "1602",
+      "question": "What symptoms are associated with acute respiratory infections?",
+      "gold": "sore throat, fever, couch, running nose, vomiting, body ache, leg pain, nausea, chills, shortness of breath",
+      "prediction": "sore throat, fever, couch, running nose, vomiting, body ache, leg pain, nausea, chills, shortness of breath",
+      "confidence": 0.845,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1603",
+      "question": "What was the most common virus detected in community samples in Ilorin, Nigeria?",
+      "gold": "Coronavirus OC43",
+      "prediction": "Coronavirus OC43",
+      "confidence": 0.9702,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1604",
+      "question": "What was the prevalence of Coronavirus OC43 in community samples in Ilorin, Nigeria?",
+      "gold": "13.3% (95% CI 6.9-23.6%)",
+      "prediction": "13.3%",
+      "confidence": 0.5584,
+      "em": 0.0,
+      "f1": 0.4
+    },
+    {
+      "id": "1605",
+      "question": "What was the prevalence of Coronavirus OC 229 E/NL63 in clinical subjects in Ilorin, Nigeria?",
+      "gold": "12.5%",
+      "prediction": "12.5%",
+      "confidence": 0.6397,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1607",
+      "question": "How can countries enhance public health surveillance?",
+      "gold": "active community surveillance",
+      "prediction": "active community surveillance",
+      "confidence": 0.9319,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1608",
+      "question": "Why do respiratory tract infections pose major public health problems?",
+      "gold": "world-wide occurrence, ease of transmission and considerable morbidity and mortality effecting people of all ages",
+      "prediction": "their world-wide occurrence, ease of transmission and considerable morbidity and mortality effecting people of all ages",
+      "confidence": 0.2153,
+      "em": 0.0,
+      "f1": 0.9677
+    },
+    {
+      "id": "1609",
+      "question": "How much of a greater risk are children than adults to viral infections?",
+      "gold": "two to three times more frequently",
+      "prediction": "two to three times",
+      "confidence": 0.4928,
+      "em": 0.0,
+      "f1": 0.8
+    },
+    {
+      "id": "1611",
+      "question": "What can respiratory viruses cause?",
+      "gold": "common colds, pharyngitis, croup, bronchiolitis, viral pneumonia and otitis media",
+      "prediction": "Illnesses",
+      "confidence": 0.7867,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1613",
+      "question": "When do respiratory infections usually happen?",
+      "gold": "during winter and early spring months",
+      "prediction": "winter and early spring months",
+      "confidence": 0.6769,
+      "em": 0.0,
+      "f1": 0.9091
+    },
+    {
+      "id": "1614",
+      "question": "What are the most common viruses?",
+      "gold": "respiratory syncytial virus (RSV), influenza A and B (INF-A, INF-B) viruses, parainfluenza viruses (PIVs), and human adenoviruses (HAdVs)",
+      "prediction": "respiratory syncytial virus (RSV), influenza A and B (INF-A, INF-B) viruses",
+      "confidence": 0.2352,
+      "em": 0.0,
+      "f1": 0.7407
+    },
+    {
+      "id": "2125",
+      "question": "What is the distance between the p4.7 and p12.7 genes in the Irish versus Japanese equine coronavirus variants?",
+      "gold": "544 base pairs",
+      "prediction": "544 base pairs",
+      "confidence": 0.2948,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "2171",
+      "question": "What type of swabs are used to sample patients with pertussis?",
+      "gold": "mid-nasal nylon flocked",
+      "prediction": "Mid-nasal",
+      "confidence": 0.3209,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "2467",
+      "question": "What is discussed in this publication?",
+      "gold": "The review first discusses the anti-viral mechanism of the OAS/RNaseL system and evasion tactics employed by different viruses. This is followed by a review of the RIDD pathway and its potential effect on the stability of viral RNAs.",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "2469",
+      "question": "What is the conclusion regarding IRE1 and RNaseL proteins?",
+      "gold": "In the context of a virus infection, the pathway leading from both these proteins have the potential to lead to cell death. Notwithstanding the fact that this might be an efficient way of virus clearance, it also portends pathological outcomes for the infected organism. Future research would probably lead to design of drugs targeting these proteins based on the structural homology of their effector domains, regulating the pathological denouement of their activation without compromising their anti-viral or potential anti-viral functions.",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "2988",
+      "question": "What is the structure of an Echovirus?",
+      "gold": "nonenveloped, single-stranded, positive-sense RNA",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1635",
+      "question": "What can nuclear receptors regulate?",
+      "gold": "homeostasis, differentiation, embryonic development, and organ physiology",
+      "prediction": "expression of adjacent genes",
+      "confidence": 0.2159,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "3258",
+      "question": "What are associated with cancer, diabetes, inflammatory disease, and osteoporosis?",
+      "gold": "Nuclear receptors (NRs)",
+      "prediction": "Nuclear receptors",
+      "confidence": 0.3674,
+      "em": 0.0,
+      "f1": 0.8
+    },
+    {
+      "id": "3259",
+      "question": "What are nuclear receptors (NRs)?",
+      "gold": "class of ligand-inducible transcription factors",
+      "prediction": "a class of ligand-inducible transcription factors",
+      "confidence": 0.5076,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3260",
+      "question": "What biological factors for nuclear receptors regulate?",
+      "gold": "homeostasis, differentiation, embryonic development, and organ physiology",
+      "prediction": "homeostasis, differentiation, embryonic development, and organ physiology",
+      "confidence": 0.8776,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3261",
+      "question": "How many families are in the NR superfamily?",
+      "gold": "seven",
+      "prediction": "seven",
+      "confidence": 0.731,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3262",
+      "question": "What is a prerequisite to make a molecular docking study feasible?",
+      "gold": "a reliable 3D (three dimensional) structure of the target protein",
+      "prediction": "a reliable 3D (three dimensional) structure of the target protein",
+      "confidence": 0.5072,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3264",
+      "question": "What are the shortcomings of X-ray crystallography?",
+      "gold": "time-consuming and expensive",
+      "prediction": "it is time-consuming and expensive",
+      "confidence": 0.2246,
+      "em": 0.0,
+      "f1": 0.75
+    },
+    {
+      "id": "3265",
+      "question": "What types of proteins are difficult to crystallize?",
+      "gold": "membrane proteins",
+      "prediction": "membrane proteins",
+      "confidence": 0.8728,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3266",
+      "question": "Where were the data collected for this study?",
+      "gold": "KEGG (Kyoto Encyclopedia of Genes and Genomes)",
+      "prediction": "KEGG (Kyoto Encyclopedia of Genes and Genomes)",
+      "confidence": 0.4552,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3680",
+      "question": "Who performed the sampling procedures?",
+      "gold": "veterinarians",
+      "prediction": "veterinarians",
+      "confidence": 0.9698,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3681",
+      "question": "When were the fecal samples collected?",
+      "gold": "from November 2004 to November 2014",
+      "prediction": "November 2004 to November 2014",
+      "confidence": 0.5498,
+      "em": 0.0,
+      "f1": 0.9091
+    },
+    {
+      "id": "3684",
+      "question": "What is the length of the replicase gene ORF1ab?",
+      "gold": "20.4 kb",
+      "prediction": "20.4 kb of the genome. The replicase gene, ORF1ab, occupies~20.4 kb",
+      "confidence": 0.2139,
+      "em": 0.0,
+      "f1": 0.3636
+    },
+    {
+      "id": "3683",
+      "question": "What type of coronavirus was detected in R. affinis and R. sinicus species?",
+      "gold": "BtCoV/Rh/YN2012",
+      "prediction": "BtCoV/Rh/YN2012",
+      "confidence": 0.2081,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3679",
+      "question": "How many types of coronaviruses are known to cause human disease?",
+      "gold": "Six",
+      "prediction": "Six",
+      "confidence": 0.8304,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4051",
+      "question": "What is the cause of Feline Infectious Peritonitis (FIP)?",
+      "gold": "FIP virus (FIPV)",
+      "prediction": "FIP virus",
+      "confidence": 0.565,
+      "em": 0.0,
+      "f1": 0.8
+    },
+    {
+      "id": "4053",
+      "question": "How is FECV detected in cats?",
+      "gold": "shedding in their faeces",
+      "prediction": "shedding in their faeces",
+      "confidence": 0.442,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4055",
+      "question": "What type of vaccine is used to protect against FIPV infection?",
+      "gold": "an attenuated, temperature-sensitive strain of type II FIPV",
+      "prediction": "attenuated, temperature-sensitive strain of type II FIPV",
+      "confidence": 0.2271,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4056",
+      "question": "Why is their controversy surrounding the FIPV vaccine?",
+      "gold": "the vaccine contains type 2 strain, whereas type 1 viruses are more prevalent in the field",
+      "prediction": "the vaccine contains type 2 strain",
+      "confidence": 0.3504,
+      "em": 0.0,
+      "f1": 0.5263
+    },
+    {
+      "id": "4058",
+      "question": "How was the binding strength measured?",
+      "gold": "nano Isothermal Titration Calorimeter (ITC)",
+      "prediction": "nano Isothermal Titration Calorimeter",
+      "confidence": 0.2853,
+      "em": 0.0,
+      "f1": 0.8889
+    },
+    {
+      "id": "4071",
+      "question": "What do neuroaminidase inhibitors target?",
+      "gold": "NA glycoproteins of influenza A and B virus",
+      "prediction": "NA glycoproteins of influenza A and B virus",
+      "confidence": 0.3539,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4072",
+      "question": "What is the function of neuroaminidase in the influenza virus?",
+      "gold": "cleave the α-ketosidic linkage between terminal sialic acid and an adjacent sugar residue",
+      "prediction": "to cleave the α-ketosidic linkage between terminal sialic acid and an adjacent sugar residue",
+      "confidence": 0.2299,
+      "em": 0.0,
+      "f1": 0.9565
+    },
+    {
+      "id": "4075",
+      "question": "What method was used to measure the inhibition of viral replication?",
+      "gold": "MTT method",
+      "prediction": "MTT method",
+      "confidence": 0.4666,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4434",
+      "question": "Why have nucleic acid amplification tests been restricted to laboratory settings?",
+      "gold": "time, equipment, and technical expertise requirements",
+      "prediction": "time, equipment, and technical expertise requirements",
+      "confidence": 0.8127,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5211",
+      "question": "What statistical tests were used to compare categorical variables?",
+      "gold": "Chi-square test and Fisher's exact test",
+      "prediction": "The Chi-square test and Fisher's exact test",
+      "confidence": 0.5393,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5212",
+      "question": "What was a severe limitation of this study?",
+      "gold": "unable to evaluate the levels of immunomodulators in the serum samples of a control group",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "5213",
+      "question": "What followup is needed to confirm the results of the current study?",
+      "gold": "a larger, longitudinal study on the etiology and severity of pneumonia",
+      "prediction": "longitudinal study on the etiology and severity of pneumonia",
+      "confidence": 0.1584,
+      "em": 0.0,
+      "f1": 0.9412
+    },
+    {
+      "id": "5214",
+      "question": "What is the conclusion of this study?",
+      "gold": "mixed respiratory infections and IP-10 may play major, interconnected roles in the pathogenesis of pneumonia",
+      "prediction": "mixed infection is related to elevated IP-10 and disease severity",
+      "confidence": 0.1629,
+      "em": 0.0,
+      "f1": 0.25
+    },
+    {
+      "id": "5215",
+      "question": "What suggests that IP-10 plays a significant role on the pathogenesis of pneumonia?",
+      "gold": "highest serum IP-10 levels",
+      "prediction": "highest serum IP-10 levels were identified among patients with both several pathogen detected and severe pneumonia",
+      "confidence": 0.2859,
+      "em": 0.0,
+      "f1": 0.4
+    },
+    {
+      "id": "5229",
+      "question": "What was the purpose of this research?",
+      "gold": "to assess the overall in vitro bactericidal activity of nine newly synthesized diamides",
+      "prediction": "to assess the overall in vitro bactericidal activity of nine newly synthesized diamides in dependence on time and concentration",
+      "confidence": 0.1364,
+      "em": 0.0,
+      "f1": 0.8
+    },
+    {
+      "id": "5230",
+      "question": "What is the conclusion of the study?",
+      "gold": "the marmoset an appropriate animal model for biodefense-related pathogens",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "5231",
+      "question": "Why makes the marmoset an appropriate animal model for pathogen research?",
+      "gold": "the small size of marmosets, their immune response to infection that is comparable to humans, and the ability to house more statistically relevant numbers within high containment",
+      "prediction": "small size of marmosets",
+      "confidence": 0.1014,
+      "em": 0.0,
+      "f1": 0.2759
+    },
+    {
+      "id": "3895",
+      "question": "How can the efficacy of DAAs be diminished?",
+      "gold": "the presence of resistance-associated substitutions",
+      "prediction": "the presence of resistance-associated substitutions (RASs) before and after treatment",
+      "confidence": 0.1078,
+      "em": 0.0,
+      "f1": 0.6154
+    },
+    {
+      "id": "3896",
+      "question": "Was is the response rate of the Hepatitis C virus to direct-acting antiviral treatments?",
+      "gold": "up to 98%",
+      "prediction": "up to 98%",
+      "confidence": 0.4512,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3897",
+      "question": "How do nonnucleoside NS5B polymerase inhibitors work?",
+      "gold": "inhibit polymerase activity by allosteric mechanisms",
+      "prediction": "allosteric mechanisms",
+      "confidence": 0.1699,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "3899",
+      "question": "Was written consent obtained?",
+      "gold": "was obtained",
+      "prediction": "Written informed consent",
+      "confidence": 0.3012,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "3903",
+      "question": "What are the key factors preventing the elimination of HCV infection in some patients?",
+      "gold": "baseline and emergent resistance variants",
+      "prediction": "baseline and emergent resistance variants",
+      "confidence": 0.8629,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5243",
+      "question": "What is the structure of the pestivirus?",
+      "gold": "single stranded positive sense RNA genomes",
+      "prediction": "single stranded positive sense RNA genomes",
+      "confidence": 0.1168,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5244",
+      "question": "What sequences are critical for the autonomous replication of the pestivirus genome?",
+      "gold": "5′ and 3′ untranslated regions (UTRs)",
+      "prediction": "5′ and 3′ untranslated regions",
+      "confidence": 0.5302,
+      "em": 0.0,
+      "f1": 0.9091
+    },
+    {
+      "id": "5245",
+      "question": "What are the 4 structural proteins of the pestivirus polyprotein?",
+      "gold": "nucleocapsid protein C, envelope glycoproteins E rns , E1 and E2",
+      "prediction": "nucleocapsid protein C, envelope glycoproteins E rns , E1 and E2",
+      "confidence": 0.7975,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5246",
+      "question": "The BAC differed from the parental cDNA sequence by what amino acid substitutions?",
+      "gold": "aa",
+      "prediction": "9 aa substitutions",
+      "confidence": 0.432,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "5247",
+      "question": "What is the purpose of this research study?",
+      "gold": "to examine whether a relationship exists between operation volumes and SSIs",
+      "prediction": "to examine whether a relationship exists between operation volumes and SSIs",
+      "confidence": 0.1789,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5249",
+      "question": "What is the \"Never Event\" policy?",
+      "gold": "hospitals would no longer receive higher payments for the additional costs associated with treating patients for certain healthcare-acquired infections",
+      "prediction": "hospitals would no longer receive higher payments for the additional costs associated with treating patients for certain healthcare-acquired infections",
+      "confidence": 0.1874,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5251",
+      "question": "Which patients were excluded from the study?",
+      "gold": "CABG patients under the age of 18 years or over 85 years",
+      "prediction": "CABG patients under the age of 18 years or over 85 years",
+      "confidence": 0.728,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5267",
+      "question": "How does PEDV cause illness?",
+      "gold": "destroys the lining of piglets' intestines",
+      "prediction": "Once the virus is internalized, it destroys the lining of piglets' intestines",
+      "confidence": 0.0321,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "5268",
+      "question": "What is the size of the PEDV genome?",
+      "gold": "26 to 32 kb",
+      "prediction": "26 to 32 kb",
+      "confidence": 0.7932,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5271",
+      "question": "Which viruses are part of the Old World complex of Arenaviridae?",
+      "gold": "Lassa and Lujo viruses",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "5273",
+      "question": "What is the incubation period for arenavirus?",
+      "gold": "1-3 weeks",
+      "prediction": "1-3 weeks",
+      "confidence": 0.9486,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5240",
+      "question": "What has been correlated with the pathogenicity of the H5N1 infection?",
+      "gold": "caspase-dependent apoptosis in airway cells",
+      "prediction": "apoptosis",
+      "confidence": 0.1916,
+      "em": 0.0,
+      "f1": 0.3333
+    },
+    {
+      "id": "5241",
+      "question": "What is the conclusion of the study?",
+      "gold": "glycyrrhizin might also serve as lead structure for the development of novel anti-influenza drugs",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "3241",
+      "question": "What is the mean duration of time from first positive chest x-ray to bilateral multilobar lung infiltrates in human adenovirus type 55 (HAdV-55)?",
+      "gold": "4.8 days",
+      "prediction": "4.8 days",
+      "confidence": 0.8441,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3242",
+      "question": "What are the most frequent clinical manifestations of human adenovirus type 55 (HAdV-55) induced ARDS?",
+      "gold": "Persistent high fever, dyspnea and rapid progression to respiratory failure within 2 weeks, together with bilateral consolidations and infiltrates",
+      "prediction": "Persistent high fever, dyspnea and rapid progression to respiratory failure within 2 weeks",
+      "confidence": 0.3829,
+      "em": 0.0,
+      "f1": 0.8125
+    },
+    {
+      "id": "3246",
+      "question": "What is the mean time of onset of symptoms to ICU admission in human adenovirus type 55 (HAdV-55)?",
+      "gold": "9.6 days",
+      "prediction": "9.6 days",
+      "confidence": 0.6395,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3247",
+      "question": "What is the mean rate of respiration upon admission to the ICU when admitted for human adenovirus type 55 (HAdV-55)?",
+      "gold": "43 breaths per minute",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "3249",
+      "question": "What does a chest x-ray look like for a patient with a severe case of human adenovirus type 55 (HAdV-55)?",
+      "gold": "CXRs revealed multiple bilateral lobar or segment consolidation in the lungs of all five patients, and radiographic lesions progressed rapidly after ICU admission",
+      "prediction": "multiple bilateral lobar or segment consolidation",
+      "confidence": 0.0621,
+      "em": 0.0,
+      "f1": 0.4286
+    },
+    {
+      "id": "3250",
+      "question": "What are the high resolution pulmonary CT scan findings for patients with severe cases of human adenovirus type 55 (HAdV-55)?",
+      "gold": "Consolidations within a single lobe or several lobes with a clear border and air bronchogram were the most common findings on HRCT scans. Nodules, patches, pleural effusion, abscess and a cavity were also seen visualized by HRCT",
+      "prediction": "Unilateral or bilateral consolidations and infiltrates",
+      "confidence": 0.2854,
+      "em": 0.0,
+      "f1": 0.1538
+    },
+    {
+      "id": "3255",
+      "question": "What is the mortality rate of severe ARDS from human adenovirus type 55 (HAdV-55)?",
+      "gold": "HAdV-55-induced severe ARDS has a very high mortality rate (80%) despite appropriate respiratory support.",
+      "prediction": "80%",
+      "confidence": 0.9276,
+      "em": 0.0,
+      "f1": 0.1429
+    },
+    {
+      "id": "3256",
+      "question": "What role does T-cell count play in severe human adenovirus type 55 (HAdV-55) infection?",
+      "gold": "a lower T-cell count may be a risk factor for HAdV-55 infection in young adults",
+      "prediction": "risk factor",
+      "confidence": 0.0996,
+      "em": 0.0,
+      "f1": 0.2667
+    },
+    {
+      "id": "3257",
+      "question": "How successful are the use of invasive mechanical ventilation (IMV) and non-invasive positive pressure ventilation (NPPV) in the treatment of severe ARDS from human adenovirus type 55 infection?",
+      "gold": "we found that severe HAdV-55 infection could cause a rapid progression of respiratory failure, with a very high failure rate for NPPV and IMV",
+      "prediction": "failure rate",
+      "confidence": 0.2124,
+      "em": 0.0,
+      "f1": 0.1667
+    },
+    {
+      "id": "5252",
+      "question": "How many patients were analyzed in the study?",
+      "gold": "Two hundred",
+      "prediction": "Two hundred",
+      "confidence": 0.9161,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5256",
+      "question": "When did WHO declare a pandemic of pH1N1/2009v influenza?",
+      "gold": "11 June 2009",
+      "prediction": "11 June 2009",
+      "confidence": 0.979,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5259",
+      "question": "What are the results of the study?",
+      "gold": "a substantial proportion of Reunion Island's population had pre-existing immunity to 2009 pandemic influenza virus",
+      "prediction": "Our study shows that a substantial proportion of Reunion Island's population had pre-existing immunity to 2009 pandemic influenza virus with the highest baseline-proxy seroprevalence rate observed among adults aged of 60 years or more.",
+      "confidence": 0.0185,
+      "em": 0.0,
+      "f1": 0.6087
+    },
+    {
+      "id": "5262",
+      "question": "What were the aims of this study?",
+      "gold": "to investigate the different pathogens involved in ILI and describe the associated symptoms",
+      "prediction": "to investigate the different pathogens involved in ILI and describe the associated symptoms",
+      "confidence": 0.3891,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5263",
+      "question": "What network of physicians provides real-time clinical data on the spread of influenza in France?",
+      "gold": "Réseau Sentinelles",
+      "prediction": "Réseau Sentinelles",
+      "confidence": 0.3882,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5269",
+      "question": "What was the aim of this study?",
+      "gold": "to elucidate the proximate causes of breeding failure behind the recent decline in productivity in the Spanish Pyrenees",
+      "prediction": "to attempt to elucidate the proximate causes of breeding failure behind the recent decline in productivity in the Spanish Pyrenees",
+      "confidence": 0.0774,
+      "em": 0.0,
+      "f1": 0.9375
+    },
+    {
+      "id": "5270",
+      "question": "Where is the bearded vulture (Gypaetus barbatus) commonly found?",
+      "gold": "the Pyrenees",
+      "prediction": "Pyrenees",
+      "confidence": 0.5858,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5277",
+      "question": "What was the focus of this study?",
+      "gold": "the antiproliferative effect of a copper (II) complex on HT-29 colon cancer cells",
+      "prediction": "HT-29 colon cancer cells",
+      "confidence": 0.1036,
+      "em": 0.0,
+      "f1": 0.5333
+    },
+    {
+      "id": "5280",
+      "question": "What is the 5-year survival rate for colorectal cancer patients?",
+      "gold": "64.3%",
+      "prediction": "64.3%",
+      "confidence": 0.95,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5281",
+      "question": "How were nuclear morphological changes in HT-29 cells measured?",
+      "gold": "detection of nuclear condensation",
+      "prediction": "nuclear condensation",
+      "confidence": 0.6991,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "5285",
+      "question": "What was the goal of this study?",
+      "gold": "to explore the feasibility of DNA vaccination of poultry",
+      "prediction": "could keep pace with the continued evolution of avian influenza viruses.",
+      "confidence": 0.0356,
+      "em": 0.0,
+      "f1": 0.1111
+    },
+    {
+      "id": "5298",
+      "question": "What was the conclusion of this study?",
+      "gold": "Two E. coli W mutants were engineered that could effectively produce the bio-active flavonol glycosides hyperoside and quercitrin",
+      "prediction": "most processes still display low production rates and titers",
+      "confidence": 0.0207,
+      "em": 0.0,
+      "f1": 0.0769
+    },
+    {
+      "id": "5293",
+      "question": "What represses murine hepatitis virus strain 3 (MHV-3) infection?",
+      "gold": "Fgl2 depletion",
+      "prediction": "Fgl2 depletion",
+      "confidence": 0.7778,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5297",
+      "question": "How long after MHV-3 infection were liver samples taken?",
+      "gold": "72 h",
+      "prediction": "72 h",
+      "confidence": 0.9054,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "590",
+      "question": "What is the Boosted Regression Tree method?",
+      "gold": "BRT utilizes regression trees and boosting algorithms to fit several models and combines them for improving prediction by performing iterative loop throughout the model",
+      "prediction": "stochastic gradient boosting",
+      "confidence": 0.8786,
+      "em": 0.0,
+      "f1": 0.0769
+    },
+    {
+      "id": "589",
+      "question": "Where is the highest risk of  HPAI H5N1 like disease emergence?",
+      "gold": "Emergence risk should be highest in the most rapidly transforming urban areas, peri-urban zones where mixes of urban-rural, modern-traditional land uses and poultry husbandry coincide most intensely.",
+      "prediction": "urban areas",
+      "confidence": 0.3116,
+      "em": 0.0,
+      "f1": 0.1429
+    },
+    {
+      "id": "594",
+      "question": "How does land use fragmentation increase the risk of flu-like diseases?",
+      "gold": "Landscape fragmentation produces ecotones, defined as abrupt edges or transitions zones between different ecological systems, thought to facilitate disease emergence by increasing the intensity and frequency of contact between host species [31] Furthermore, fragmentation of natural habitat tends to interrupt and degrade natural processes, including interspecies interactions that regulate densities of otherwise opportunistic species that may serve as competent hosts",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "597",
+      "question": "What is the relationship between aquaculture and spread of H5N1 like diseases?",
+      "gold": "extent of aquaculture is a known risk factor [10] , possibly because water bodies offer routes for transmission and persistence of the virus",
+      "prediction": "risk factor",
+      "confidence": 0.0746,
+      "em": 0.0,
+      "f1": 0.1818
+    },
+    {
+      "id": "598",
+      "question": "What is the relationship between proximity ofwater bodies to agricultural lands and spread of H5N1 like diseases?",
+      "gold": "Proximity to water bodies increases the risk of outbreaks [47, [50] [51] [52] , possibly by increasing the chance of contact between wild water birds and domestic poultry.",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "658",
+      "question": "Mechanism of action of Chloroquine(CQ) and Hydroxychloroquine(HCQ) against COVID-19?",
+      "gold": "CQ and HCQ are weak bases that are known to elevate the pH of acidic intracellular organelles",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "661",
+      "question": "What is the effect of Chloroquine(CQ) and Hydroxychloroquine(HCQ) on endosomal maturation and endocytosis in COVID-19 treatment?",
+      "gold": "Since acidification is crucial for endosome maturation and function, we surmise that endosome maturation might be blocked at intermediate stages of endocytosis,",
+      "prediction": "inhibiting virus entry",
+      "confidence": 0.1741,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "3459",
+      "question": "What proportion of healthcare workers reported symptoms  of depression?",
+      "gold": "50.4%",
+      "prediction": "50.4%",
+      "confidence": 0.6243,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3460",
+      "question": "What proportion of healthcare workers reported symptoms of anxiety?",
+      "gold": "[44.6%",
+      "prediction": "560 [44.6%",
+      "confidence": 0.5469,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "3462",
+      "question": "What proportion reported distress?",
+      "gold": "[71.5%",
+      "prediction": "71.5%",
+      "confidence": 0.3878,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3464",
+      "question": "What were the  Insomnia Severity Index scores ?",
+      "gold": "among frontline vs second-line workers: 6.0 [2.0-11.0] vs 4.0 [1.0-8.0]; P < .001",
+      "prediction": "7-item",
+      "confidence": 0.6861,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "3466",
+      "question": "What were the results of analysis?",
+      "gold": "participants from outside Hubei province were associated with lower risk of experiencing symptoms of distress compared with those in Wuhan (odds ratio [OR], 0.62; 95% CI, 0.43-0.88; P = .008)",
+      "prediction": "Multivariable logistic regression",
+      "confidence": 0.0957,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "3468",
+      "question": "What are the conclusions of this study?",
+      "gold": "In this survey of heath care workers in hospitals equipped with fever clinics or wards for patients with COVID-19 in Wuhan and other regions in China, participants reported experiencing psychological burden, especially nurses, women, those in Wuhan, and frontline health care workers directly engaged in the diagnosis, treatment, and care for patients with COVID-19.",
+      "prediction": "participants reported experiencing psychological burden",
+      "confidence": 0.0853,
+      "em": 0.0,
+      "f1": 0.1724
+    },
+    {
+      "id": "929",
+      "question": "What is KATNAL1?",
+      "gold": "microtubule severing enzyme",
+      "prediction": "microtubule severing enzyme",
+      "confidence": 0.3059,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "930",
+      "question": "What organ is most associated with the KATNAL1 gene?",
+      "gold": "central nervous system",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "931",
+      "question": "What CNS functions can be measured by studying the movement of mice in a T-maze?",
+      "gold": "working memory and spatial memory",
+      "prediction": "working memory and spatial memory",
+      "confidence": 0.3192,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1223",
+      "question": "Where is Q130 located in the NS4B protein?",
+      "gold": "transmembrane domain 3",
+      "prediction": "transmembrane domain 3",
+      "confidence": 0.8094,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1224",
+      "question": "What is the mechanism of action for manidipine?",
+      "gold": "voltage-gated Ca(2+) channel (VGCC) inhibitor",
+      "prediction": "voltage-gated Ca(2+) channel",
+      "confidence": 0.1441,
+      "em": 0.0,
+      "f1": 0.75
+    },
+    {
+      "id": "1227",
+      "question": "How many open reading frames are in the flavivirus genome?",
+      "gold": "single",
+      "prediction": "11-kb positive-stranded RNA genome containing a single",
+      "confidence": 0.319,
+      "em": 0.0,
+      "f1": 0.2857
+    },
+    {
+      "id": "1228",
+      "question": "What are the structural protein elements of a flavivirus?",
+      "gold": "capsid (C), membrane (premembrane [prM] and membrane [M] ), and envelope (E)",
+      "prediction": "capsid (C), membrane (premembrane [prM] and membrane [M] ), and envelope (E)",
+      "confidence": 0.357,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1230",
+      "question": "What are RVPs?",
+      "gold": "Recombinant viral particles",
+      "prediction": "Recombinant viral particles",
+      "confidence": 0.9074,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1232",
+      "question": "What is the selective index in high throughput screening?",
+      "gold": "the 50% cytotoxic concentration",
+      "prediction": "SI; which is equal to the 50% cytotoxic concentration [CC 50 [/50% inhibitory concentration [IC 50 ]) of Ͼ10",
+      "confidence": 0.339,
+      "em": 0.0,
+      "f1": 0.3
+    },
+    {
+      "id": "431",
+      "question": "Is Rotavirus single or double-stranded?",
+      "gold": "double-stranded ribonucleic acid",
+      "prediction": "double-stranded",
+      "confidence": 0.6635,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "432",
+      "question": "What structural proteins are coded by Rotavirus?",
+      "gold": "VP1-VP4, VP6 and VP7",
+      "prediction": "VP1-VP4, VP6 and VP7",
+      "confidence": 0.8587,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4256",
+      "question": "What do immunoglobulin isotype recombination and somatic hyper mutation depend on?",
+      "gold": "expression of AID",
+      "prediction": "AID",
+      "confidence": 0.3793,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "4257",
+      "question": "What was used to quantify the amount of IgM secreting cells?",
+      "gold": "ELISpot technique",
+      "prediction": "ELISpot",
+      "confidence": 0.5816,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "4394",
+      "question": "What is the number of confirmed cases reached on 8 February 2020?",
+      "gold": "34,598",
+      "prediction": "34,598",
+      "confidence": 0.9581,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4398",
+      "question": "What is the main idea behind the proposed model?",
+      "gold": "to improve the performance of ANFIS by determining the parameters of ANFIS using FPASSA.",
+      "prediction": "to improve the performance of ANFIS",
+      "confidence": 0.3484,
+      "em": 0.0,
+      "f1": 0.5882
+    },
+    {
+      "id": "4401",
+      "question": "What did the comparison of  the FPASSA-ANFIS model with several existing models, show?",
+      "gold": "it showed better performance in terms of Mean Absolute Percentage Error (MAPE), Root Mean Squared Relative Error (RMSRE), Root Mean Squared Relative Error (RMSRE), coefficient of determination ( R 2 ), and computing time.",
+      "prediction": "better performance",
+      "confidence": 0.6686,
+      "em": 0.0,
+      "f1": 0.1176
+    },
+    {
+      "id": "4403",
+      "question": "What were the outcomes of the test?",
+      "gold": "showed good performances",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "4407",
+      "question": "What does ANFIS offer?",
+      "gold": "flexibility in determining nonlinearity in the time series data, as well as combining the properties of both artificial neural networks (ANN) and fuzzy logic systems.",
+      "prediction": "flexibility in determining nonlinearity in the time series data",
+      "confidence": 0.7747,
+      "em": 0.0,
+      "f1": 0.5161
+    },
+    {
+      "id": "4421",
+      "question": "What is SI?",
+      "gold": "swarm intelligence",
+      "prediction": "swarm intelligence",
+      "confidence": 0.6152,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4423",
+      "question": "What is SCA?",
+      "gold": "sine-cosine algorithm",
+      "prediction": "sine-cosine algorithm",
+      "confidence": 0.8041,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4426",
+      "question": "What may be a problem with individual SI algorithm?",
+      "gold": "may stock at local optima",
+      "prediction": "stock at local optima",
+      "confidence": 0.5384,
+      "em": 0.0,
+      "f1": 0.8889
+    },
+    {
+      "id": "4429",
+      "question": "What  is the FPA optimization algorithm inspired by?",
+      "gold": "inspired by the flow pollination process of the flowering plants.",
+      "prediction": "flow pollination process of the flowering plants",
+      "confidence": 0.466,
+      "em": 0.0,
+      "f1": 0.8571
+    },
+    {
+      "id": "4430",
+      "question": "What is the SSA optimization algorithm inspired by?",
+      "gold": "inspired by the behavior of salp chains",
+      "prediction": "behavior of salp chains",
+      "confidence": 0.6373,
+      "em": 0.0,
+      "f1": 0.8
+    },
+    {
+      "id": "5302",
+      "question": "What is archazolid?",
+      "gold": "v-ATPase inhibitor",
+      "prediction": "anti-metastatic compound",
+      "confidence": 0.3387,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "5303",
+      "question": "How many complexes are within v-ATPase?",
+      "gold": "two",
+      "prediction": "two",
+      "confidence": 0.6298,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5304",
+      "question": "What is the role of v-ATPase in the plasma membrane of osteoclasts and renal epithelial cells?",
+      "gold": "they pump protons into the extracellular space",
+      "prediction": "pump protons into the extracellular space",
+      "confidence": 0.4923,
+      "em": 0.0,
+      "f1": 0.9091
+    },
+    {
+      "id": "5306",
+      "question": "How were untreated MDA-MB-231 cells labeled?",
+      "gold": "CellTracker Green CMFDA Dye",
+      "prediction": "CellTracker Green CMFDA Dye",
+      "confidence": 0.774,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5308",
+      "question": "What was the reported infection rate for influenza?",
+      "gold": "30.0%",
+      "prediction": "30.0%",
+      "confidence": 0.8512,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5309",
+      "question": "How many times more likely was an infection found in patients over 85 years old?",
+      "gold": "1.5 to 1.6 times",
+      "prediction": "1.5 to 1.6",
+      "confidence": 0.3971,
+      "em": 0.0,
+      "f1": 0.8571
+    },
+    {
+      "id": "644",
+      "question": "What are the steps that a hospital should take after COVID-19 outbreak?",
+      "gold": "2019-nCoV patients should be admitted",
+      "prediction": "suspending elective surgeries, canceling ambulatory clinics and outpatient diagnostic procedures, transferring patients to other institutions, and restricting hospital visitors",
+      "confidence": 0.2714,
+      "em": 0.0,
+      "f1": 0.0833
+    },
+    {
+      "id": "669",
+      "question": "Use of SIR/SEIR model in Statistics-Based Predictions of Coronavirus Epidemic Spreading?",
+      "gold": "susceptible persons is S, infected (persons who are sick and spread the infection) -I, removed (persons who do not spread the infection anymore, this number is the sum of isolated, recovered and dead people) -R; the infection and immunization rates",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1935",
+      "question": "What virus are used by the most successful neuronal circuit tracing methods?",
+      "gold": "Pseudorabies (PRV) and Rabies viruses (RABV)",
+      "prediction": "Pseudorabies (PRV) and Rabies viruses",
+      "confidence": 0.2684,
+      "em": 0.0,
+      "f1": 0.9091
+    },
+    {
+      "id": "1936",
+      "question": "In what direction does the Vesicular stomatitis virus spread through the nervous system?",
+      "gold": "anterograde",
+      "prediction": "anterograde",
+      "confidence": 0.5973,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1938",
+      "question": "What types of viruses can be used to study the connectivity of neuronal circuitry?",
+      "gold": "rVSV vectors",
+      "prediction": "rVSV vectors",
+      "confidence": 0.7898,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "2141",
+      "question": "What is Carrageenan?",
+      "gold": "a clinically proven and marketed compound for the treatment of viral upper respiratory tract infections",
+      "prediction": "a clinically proven and marketed compound for the treatment of viral upper respiratory tract infections",
+      "confidence": 0.5056,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "2142",
+      "question": "What is a potential therapeutic benefit of carageenan?",
+      "gold": "carrageenan and Zanamivir act synergistically against several influenza A virus strains (H1N1(09)pdm, H3N2, H5N1, H7N7)",
+      "prediction": "increases survival of infected animals",
+      "confidence": 0.0975,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "2143",
+      "question": "What is the optimal window for initiating treatment with carageenan and Zanamivir?",
+      "gold": "72 hours post infection",
+      "prediction": "72 hours",
+      "confidence": 0.4778,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "2147",
+      "question": "Can influenza a virus subtype h7n9 be transmit human to human?",
+      "gold": "some sporadic cases seemed to be a result of human to human transmissions",
+      "prediction": "some sporadic cases seemed to be a result of human to human transmissions",
+      "confidence": 0.0739,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "2151",
+      "question": "Is coinfection common in influenza infection?",
+      "gold": "influenza virus infections are often accompanied by other viral pathogens",
+      "prediction": "different ratios of co-infections have been found",
+      "confidence": 0.164,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "2153",
+      "question": "What percentage of people infected with influenza have a viral coinfection?",
+      "gold": "Analysis by qRT-PCR revealed that 54.5-83.3% of influenza A or B positive patients were found to have at least one concomitant respiratory viral infection [9] [10] [11] [12] . The detection frequency with immunofluorescence was found to be even higher (90-100%) [13, 14] .",
+      "prediction": "54.5-83.3%",
+      "confidence": 0.4718,
+      "em": 0.0,
+      "f1": 0.0488
+    },
+    {
+      "id": "2155",
+      "question": "What is the anti-viral mechanism of action for carrageenan?",
+      "gold": "The antiviral mechanism of carrageenan is based on the interference with viral attachment; as a consequence, viral entry is inhibited",
+      "prediction": "interference with viral attachment",
+      "confidence": 0.8667,
+      "em": 0.0,
+      "f1": 0.381
+    },
+    {
+      "id": "2156",
+      "question": "What is the hypothetical mechanical benefit for carageenan in preventing and treating upper respiratory infections?",
+      "gold": "a protective physical barrier in the nasal cavity",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "2163",
+      "question": "Is Oseltamivir effective when taken intranasally?",
+      "gold": "In contrast to Oseltamivir, which needs to be activated by metabolic conversion, Zanamivir is directly applied as active drug and can also be administered intranasally",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "2165",
+      "question": "Do carageenan and Zanamivir delivered intranasally have a benefit when taken for influenza subtype H7N7 infection?",
+      "gold": "the combination of two effective, established mono-therapies resulted in a significantly enhanced survival in lethally H7N7 infected mice",
+      "prediction": "significantly enhanced survival",
+      "confidence": 0.0592,
+      "em": 0.0,
+      "f1": 0.3158
+    },
+    {
+      "id": "2166",
+      "question": "Do carageenan and Zanamivir delivered intranasally have a benefit when taken for influenza subtype H1N1 infection?",
+      "gold": "carrageenan and Zanamivir starting 72 hpi significantly protects lethally influenza H1N1(09)pdm infected mice",
+      "prediction": "significantly protects lethally influenza H1N1(09)pdm infected mice",
+      "confidence": 0.1356,
+      "em": 0.0,
+      "f1": 0.7
+    },
+    {
+      "id": "2179",
+      "question": "Is there a dose-dependent response to carageenan and Zanamavir intranasal therapy?",
+      "gold": "While H1N1(09)pdm was highly sensitive to inhibition by both substances alone, H7N7 required much higher concentrations of carrageenan and Zanamivir, respectively, to achieve similar inhibition efficiencies",
+      "prediction": "They have shown to differ in in-vitro susceptibility",
+      "confidence": 0.0397,
+      "em": 0.0,
+      "f1": 0.0588
+    },
+    {
+      "id": "2182",
+      "question": "Did the use of carageenan play a role in pandemic's caused by novel viruses?",
+      "gold": "A second scope of this combination is the protection against newly emerging pandemic viruses during the time until identification of the virus followed by manufacturing and distribution of vaccines",
+      "prediction": "protection against newly emerging pandemic viruses",
+      "confidence": 0.0317,
+      "em": 0.0,
+      "f1": 0.3871
+    },
+    {
+      "id": "4101",
+      "question": "How was ILI defined?",
+      "gold": "as a sudden onset of fever more than 38 degrees Celsius and cough, associated or not with other symptoms such as breathing difficulty, headache, etc.",
+      "prediction": "a sudden onset of fever more than 38 degrees Celsius and cough",
+      "confidence": 0.2652,
+      "em": 0.0,
+      "f1": 0.6286
+    },
+    {
+      "id": "4104",
+      "question": "What is this assay based on?",
+      "gold": "on the multiplex ligation-dependent probe amplification (MLPA) technology.",
+      "prediction": "multiplex ligation-dependent probe amplification (MLPA) technology",
+      "confidence": 0.4839,
+      "em": 0.0,
+      "f1": 0.9231
+    },
+    {
+      "id": "4037",
+      "question": "What viruses were detected?",
+      "gold": "respiratory viruses in 169/222 (76.1%) samples, mostly rhinovirus (23.4%), influenza A virus (21.2%), influenza B virus (12.6%), coronavirus (4.9%) and Human metapneumovirus (3.6%).",
+      "prediction": "respiratory viruses",
+      "confidence": 0.2106,
+      "em": 0.0,
+      "f1": 0.1667
+    },
+    {
+      "id": "4039",
+      "question": "What seasonal differences were found?",
+      "gold": "seasonal differences, with circulation of Human Metapneumoviruses, RSV A and B and coronavirus only during summer; whereas parainfluenza viruses were identified only during winter.",
+      "prediction": "important seasonal differences, with circulation of Human Metapneumoviruses, RSV A and B and coronavirus only during summer",
+      "confidence": 0.3112,
+      "em": 0.0,
+      "f1": 0.7692
+    },
+    {
+      "id": "4041",
+      "question": "What does the study show?",
+      "gold": "that ILI are not only attributable to influenza and underlines the need for biological surveillance. As the use of multiplex RT-PCR showed its efficacy, it is now used routinely in the surveillance of ILI.",
+      "prediction": "a substantial circulation of multiple respiratory pathogens in Réunion Island throughout the year",
+      "confidence": 0.1345,
+      "em": 0.0,
+      "f1": 0.0952
+    },
+    {
+      "id": "4042",
+      "question": "Which are identified  as major viruses mostly responsible for ILI and pneumonia in several studies?",
+      "gold": "Influenza viruses, Respiratory Syncytial viruses (RSV) and Parainfluenza viruses",
+      "prediction": "Influenza viruses, Respiratory Syncytial viruses (RSV) and Parainfluenza viruses",
+      "confidence": 0.8858,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4087",
+      "question": "What percentage of these infections are identified?",
+      "gold": "less than 50%",
+      "prediction": "less than 50%",
+      "confidence": 0.762,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4090",
+      "question": "Where is Reunion Island located?",
+      "gold": "n the southern hemisphere between Madagascar and Mauritius in the Indian Ocean (Latitude: 21°05.2920 S Longitude: 55°36.4380 E.)",
+      "prediction": "southern hemisphere between Madagascar and Mauritius in the Indian Ocean",
+      "confidence": 0.1862,
+      "em": 0.0,
+      "f1": 0.72
+    },
+    {
+      "id": "4098",
+      "question": "What are the ILI samples wich test negative for influence?",
+      "gold": "are of unknown etiology",
+      "prediction": "influenza are of unknown etiology",
+      "confidence": 0.4065,
+      "em": 0.0,
+      "f1": 0.8889
+    },
+    {
+      "id": "4100",
+      "question": "What are the objectives of the study?",
+      "gold": "to characterize respiratory pathogens responsible for ILI consultations in sentinel GPs in 2011 and 2012. Secondary objectives were to highlight seasonal trends on respiratory pathogens circulation and to describe occurrence of co-infections, especially during the flu season.",
+      "prediction": "to characterize respiratory pathogens responsible for ILI consultations in sentinel GPs in 2011 and 2012",
+      "confidence": 0.2261,
+      "em": 0.0,
+      "f1": 0.5882
+    },
+    {
+      "id": "4105",
+      "question": "On which system the reverse transcription and preamplification steps were performed?",
+      "gold": "on the epgradient Mastercycler 1 (Eppendorf) and the hybridization, ligation and detection steps on the LightCycler 1 480 system (Roche Applied Science).",
+      "prediction": "epgradient Mastercycler 1 (Eppendorf)",
+      "confidence": 0.3264,
+      "em": 0.0,
+      "f1": 0.3478
+    },
+    {
+      "id": "4109",
+      "question": "What viruses were identified only in winter?",
+      "gold": "Parainfluenza 1,2 and 4 viruses",
+      "prediction": "Parainfluenza 1,2 and 4",
+      "confidence": 0.5139,
+      "em": 0.0,
+      "f1": 0.8889
+    },
+    {
+      "id": "4111",
+      "question": "Respiratory viral pathogens were present in what percentage of samples?",
+      "gold": "76.1",
+      "prediction": "76.1%",
+      "confidence": 0.9544,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4112",
+      "question": "What did the study highlight?",
+      "gold": "several co-infections, showing that concomitant the multiple etiology of ILI",
+      "prediction": "several co-infections",
+      "confidence": 0.5832,
+      "em": 0.0,
+      "f1": 0.3636
+    },
+    {
+      "id": "4117",
+      "question": "What does the  study show?",
+      "gold": "that ILI is not specific to influenza and so it is essential to have biological results in order to establish the differential diagnosis and thus explain the etiology of symptoms.",
+      "prediction": "an important circulation of multiple pathogens in Réunion Island throughout the year",
+      "confidence": 0.2307,
+      "em": 0.0,
+      "f1": 0.1053
+    },
+    {
+      "id": "3589",
+      "question": "How many people were affected as of Feb. 10, 2020?",
+      "gold": "greater than 40,000",
+      "prediction": "more than 1,000",
+      "confidence": 0.6047,
+      "em": 0.0,
+      "f1": 0.3333
+    },
+    {
+      "id": "3597",
+      "question": "What are the most revealing signs that SARS-CoV-2 evolved by natural evolution.",
+      "gold": "The absence of a logical targeted pattern in the new viral sequences and a close relative in a wildlife species (bat",
+      "prediction": "The absence of a logical targeted pattern in the new viral sequences and a close relative in a wildlife species (bats)",
+      "confidence": 0.319,
+      "em": 0.0,
+      "f1": 0.9375
+    },
+    {
+      "id": "3600",
+      "question": "How was the mouse-adapted SARS virus (MA15) generated?",
+      "gold": "by serial passage of an infectious wildtype SARS CoV clone in the respiratory tract of BALB/c mice.",
+      "prediction": "serial passage of an infectious wildtype SARS CoV clone in the respiratory tract of BALB/c mice",
+      "confidence": 0.3112,
+      "em": 0.0,
+      "f1": 0.9655
+    },
+    {
+      "id": "3605",
+      "question": "What was the finding  in 2013?",
+      "gold": "several novel bat coronaviruses were isolated from Chinese horseshoe bats and the bat SARS-like or SL-CoV-WIV1 was able to use ACE2 from humans, civets and Chinese horseshoe bats for entry",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "3610",
+      "question": "Why is there  no credible evidence to support the claim that the SARS-CoV-2 is derived from the chimeric SL-SHC014-MA15 virus?",
+      "gold": "upon careful phylogenetic analyses by multiple international groups [5, 14] , the SARS-CoV-2 is undoubtedly distinct from SL-SHC014-MA15, with >6,000 nucleotide differences across the whole genome.",
+      "prediction": ">6,000 nucleotide differences across the whole genome",
+      "confidence": 0.136,
+      "em": 0.0,
+      "f1": 0.4138
+    },
+    {
+      "id": "3611",
+      "question": "What did the rumour that the virus was made by humans in the lab, claim?",
+      "gold": "that SARS-CoV-2 has HIV sequence in it and was thus likely generated in the laboratory. I",
+      "prediction": "that SARS-CoV-2 has HIV sequence in it and was thus likely generated in the laboratory",
+      "confidence": 0.184,
+      "em": 0.0,
+      "f1": 0.9655
+    },
+    {
+      "id": "3614",
+      "question": "What is the difference between evolution and synthetic constructs?",
+      "gold": "Evolution is stepwise and accrues mutations gradually over time, whereas synthetic constructs would typically use a known backbone and introduce logical or targeted changes instead of the randomly occurring mutations that are present in naturally isolated viruses such as bat CoV RaTG13.",
+      "prediction": "use a known backbone and introduce logical or targeted changes",
+      "confidence": 0.1208,
+      "em": 0.0,
+      "f1": 0.3673
+    },
+    {
+      "id": "3616",
+      "question": "What is the conclusion of this report?",
+      "gold": "More studies are needed to explore this possibility and resolve the natural origin of SARS-CoV-2. We should emphasize that, although SARS-CoV-2 shows no evidence of laboratory origin, viruses with such great public health threats must be handled properly in the laboratory and also properly regulated by the scientific community and governments.",
+      "prediction": "there is currently no credible evidence to support the claim that SARS-CoV-2 originated from a laboratory-engineered CoV.",
+      "confidence": 0.118,
+      "em": 0.0,
+      "f1": 0.1587
+    },
+    {
+      "id": "4574",
+      "question": "what is the clinical manifestation similar to?",
+      "gold": "to that of the severe acute respiratory syndrome (SARS) caused by SARS-CoV.",
+      "prediction": "severe acute respiratory syndrome",
+      "confidence": 0.2209,
+      "em": 0.0,
+      "f1": 0.5333
+    },
+    {
+      "id": "5173",
+      "question": "What was the purpose of the research?",
+      "gold": "to evaluate the effectiveness of zinc supplementation on diarrhea and average daily weight gain (ADG) in pre-weaned dairy calves",
+      "prediction": "sex-specific dosing",
+      "confidence": 0.273,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "4444",
+      "question": "How many of them are pathogenic for humans?",
+      "gold": "nearly half of them",
+      "prediction": "nearly half",
+      "confidence": 0.4314,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "4457",
+      "question": "Among zoonotic diseases, what are hosts of several pathogenic RNA viruses?",
+      "gold": "small mammals",
+      "prediction": "small mammals",
+      "confidence": 0.9928,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4462",
+      "question": "What did a review of ancient Chinese writings in 960 AD, reveal?",
+      "gold": "descriptions closely resembling hemorrhagic fever with renal syndrome (HFRS), the syndrome caused by Old World hantaviruses",
+      "prediction": "descriptions closely resembling hemorrhagic fever with renal syndrome",
+      "confidence": 0.1659,
+      "em": 0.0,
+      "f1": 0.6957
+    },
+    {
+      "id": "4463",
+      "question": "How was HFRS  first brought to the attention of western medicine ?",
+      "gold": "with an outbreak that occurred among United Nations troops during the Korean conflict between 1951 and 1954",
+      "prediction": "in association with an outbreak that occurred among United Nations troops",
+      "confidence": 0.2407,
+      "em": 0.0,
+      "f1": 0.64
+    },
+    {
+      "id": "4470",
+      "question": "How is the the precursor form GPC processed, during virus maturation?",
+      "gold": "a membrane -bound protease into Gn and Gc, a cleavage that occurs",
+      "prediction": "using a membrane -bound protease",
+      "confidence": 0.4495,
+      "em": 0.0,
+      "f1": 0.4286
+    },
+    {
+      "id": "4471",
+      "question": "When does the cleavage appear to be signaled?",
+      "gold": "after the conserved peptide signal WAASA at the C-terminal of Gn",
+      "prediction": "after the conserved peptide signal WAASA at the C-terminal of Gn [24]",
+      "confidence": 0.6458,
+      "em": 0.0,
+      "f1": 0.9474
+    },
+    {
+      "id": "4482",
+      "question": "What is the premise for apathogenic forms to  blunt any pathological response in the host?",
+      "gold": "would tend to induce an earlier innate response that would render it more likely that the virus would be quickly cleared or rendered less competent in its replication",
+      "prediction": "induce an earlier innate response",
+      "confidence": 0.1879,
+      "em": 0.0,
+      "f1": 0.2667
+    },
+    {
+      "id": "4483",
+      "question": "Which proteins and mRNAs prominently induced by hantaviruses include?",
+      "gold": "hantaviruses have been identified as adversely affecting",
+      "prediction": "MxA and IFIT-1 (ISG-56)",
+      "confidence": 0.6599,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "4492",
+      "question": "What have hantaviruses been identified as adversely affect?",
+      "gold": "endothelial migration over substrata",
+      "prediction": "endothelial migration over substrata",
+      "confidence": 0.7414,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4494",
+      "question": "What is N-protein?",
+      "gold": "a structural component of the viral nucleocapsid",
+      "prediction": "shorter (50-kD) nucleocapsid",
+      "confidence": 0.1117,
+      "em": 0.0,
+      "f1": 0.25
+    },
+    {
+      "id": "4505",
+      "question": "What is the ultimate destination for N, for its assembly into viral particles?",
+      "gold": "the Golgi",
+      "prediction": "Golgi",
+      "confidence": 0.4857,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4511",
+      "question": "Why have Hantavirus diseases of man been suspected of having an immunopathogenic basis?",
+      "gold": "plasma viral RNA with",
+      "prediction": "both strong antiviral responses",
+      "confidence": 0.0662,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "4546",
+      "question": "What does the virus seed?",
+      "gold": "local endothelium",
+      "prediction": "local endothelium",
+      "confidence": 0.8871,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4551",
+      "question": "For HCPS, what does that expression favor?",
+      "gold": "the pulmonary bed and lymphoid organs",
+      "prediction": "pulmonary bed and lymphoid organs",
+      "confidence": 0.5919,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4555",
+      "question": "What do those abnormalities sometimes culminate in?",
+      "gold": "shock and death",
+      "prediction": "shock and death",
+      "confidence": 0.941,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4559",
+      "question": "What potential mechanism,  could be presumed to underlie the pathogenesis of HCPS?",
+      "gold": "Direct viral effects",
+      "prediction": "hantavirus infections deplete blood platelets",
+      "confidence": 0.0384,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "4560",
+      "question": "What potential mechanism,  could be presumed to underlie the pathogenesis of HCPS?",
+      "gold": "Pathogenic effects caused by the activities of specific viral macromolecules.",
+      "prediction": "Pathogenic effects caused by the activities of specific viral macromolecules",
+      "confidence": 0.2276,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "4562",
+      "question": "What animal models exist for both the asymptomatic carriage of PUUV and SNV?",
+      "gold": "their native carrier rodents, the bank vole Myodes glareolus and the deer mouse P. maniculatus",
+      "prediction": "the bank vole Myodes glareolus and the deer mouse P. maniculatus",
+      "confidence": 0.3551,
+      "em": 0.0,
+      "f1": 0.8182
+    },
+    {
+      "id": "4563",
+      "question": "For what can the Syrian hamster model used?",
+      "gold": "ANDV or the related Maporal virus from Venezuela, for which an HCPS-mimetic disease is observed",
+      "prediction": "an HCPS-mimetic disease",
+      "confidence": 0.1685,
+      "em": 0.0,
+      "f1": 0.2667
+    },
+    {
+      "id": "4564",
+      "question": "What does the hamster model for HCPS caused by?",
+      "gold": "by capillary leak that results in pulmonary edema and the production of a pleural effusion with exudative characteristics",
+      "prediction": "capillary leak",
+      "confidence": 0.9891,
+      "em": 0.0,
+      "f1": 0.2222
+    },
+    {
+      "id": "4570",
+      "question": "Compared to  humans, what do ANDV infected hamsters exhibit?",
+      "gold": "exceptionally high titers of live ANDV in their tissues, with much of the viral replication occurring in hepatocytes",
+      "prediction": "exceptionally high titers of live ANDV in their tissues",
+      "confidence": 0.3758,
+      "em": 0.0,
+      "f1": 0.6923
+    },
+    {
+      "id": "798",
+      "question": "What can be a factor in using common vectors for the delivery of vaccines?",
+      "gold": "commonly employed vectors, for example Salmonella and adenovirus, often have pre-existing immune responses in the host and this has the potential to modify the subsequent immune response to a vectored antigen.",
+      "prediction": "pre-existing immune responses in the host",
+      "confidence": 0.3544,
+      "em": 0.0,
+      "f1": 0.3125
+    },
+    {
+      "id": "800",
+      "question": "Is a pre-existing immune response to commonly used delivery vector an advantage or a disadvantage?",
+      "gold": "for bacterial vectors there can in fact, in some cases, be an enhancement in immunogenicity, typically humoral, while for viral vectors pre-existing immunity is a hindrance for subsequent induction of cell-mediated responses.",
+      "prediction": "hindrance",
+      "confidence": 0.7303,
+      "em": 0.0,
+      "f1": 0.0645
+    },
+    {
+      "id": "825",
+      "question": "Which viral vaccine delivery vector was first licensed?",
+      "gold": "YFV (YF-17D strain) was the first to be licensed for use in humans, where the cDNAs encoding the envelope proteins of YFV were replaced with the corresponding genes of an attenuated Japanese encephalitis virus strain, SA14-14-2",
+      "prediction": "YFV",
+      "confidence": 0.637,
+      "em": 0.0,
+      "f1": 0.0625
+    },
+    {
+      "id": "831",
+      "question": "What are examples of attenuated poxvirus vaccine delivery vectors?",
+      "gold": "modified vaccinia virus Ankara (MVA) and New York attenuated vaccinia virus NYVAC strains",
+      "prediction": "modified vaccinia virus Ankara (MVA) and New York attenuated vaccinia virus NYVAC strains",
+      "confidence": 0.4235,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "872",
+      "question": "What is the connection between chicken and Salmonella?",
+      "gold": "Chickens (Gallus gallus) are a natural animal reservoir for Salmonella, which makes them an important source of Salmonella-associated gastroenteritis in humans.",
+      "prediction": "natural animal reservoir",
+      "confidence": 0.2349,
+      "em": 0.0,
+      "f1": 0.2727
+    },
+    {
+      "id": "836",
+      "question": "What is the advantage of adenovirus as vaccine delivery vector?",
+      "gold": "adenovirus (Ad) vector is another of the most widely evaluated vectors to date to express heterologous antigens, due to ease of production, safety profile, genetic stability, the ease of DNA genome manipulation, and the ability to stimulate both innate and adaptive immune responses and induce both T and B cell responses",
+      "prediction": "ease of production, safety profile, genetic stability, the ease of DNA genome manipulation, and the ability to stimulate both innate and adaptive immune responses and induce both T and B cell responses",
+      "confidence": 0.2493,
+      "em": 0.0,
+      "f1": 0.7692
+    },
+    {
+      "id": "838",
+      "question": "What are important criteria for selecting vaccine delivery vectors?",
+      "gold": "a vaccine should be inexpensive, so that it can be administered to a large population at minimal cost",
+      "prediction": "Safety is a major concern",
+      "confidence": 0.2069,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "841",
+      "question": "What are important criteria for selecting vaccine delivery vectors?",
+      "gold": "Safety is a major concern, as even a low level of toxicity is unacceptable",
+      "prediction": "Safety is a major concern",
+      "confidence": 0.2069,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "861",
+      "question": "What is the effect of host immune response to the delivery vector on the efficacy of vaccination?",
+      "gold": "theoretically reduce the exposure of the heterologous antigen to the immune system, as the vector is rapidly cleared.",
+      "prediction": "detrimental",
+      "confidence": 0.13,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "870",
+      "question": "What is an example  of the effect of immunity to the  delivery vector on the efficacy of vaccination?",
+      "gold": "mice that had been primed with Salmonella alone, and then boosted with Salmonella expressing tetC, induced much lower anti-tetC responses than mice that had not been primed. This argues strongly that prior immunological immunity to the vector can seriously dampen subsequent antigen-specific humoral responses.",
+      "prediction": "dampen subsequent antigen-specific humoral responses",
+      "confidence": 0.18,
+      "em": 0.0,
+      "f1": 0.2083
+    },
+    {
+      "id": "874",
+      "question": "What is the effect of host immune response to viral delivery vectors in the efficacy of vaccination?",
+      "gold": "pre-existing immunity is a major obstacle of many viralvectored vaccines, such as Ad serotype 5 or herpes simplex virus type 1 (HSV-1), where the rate of seroprevalence to these viruses is very high [40-45 % and 70 % (or more) of the US population, respectively]",
+      "prediction": "pre-existing immunity is a major obstacle",
+      "confidence": 0.0592,
+      "em": 0.0,
+      "f1": 0.2222
+    },
+    {
+      "id": "875",
+      "question": "What is the effect of host immune response to  the viral delivery vector on the efficacy of vaccination?",
+      "gold": "Vector-specific antibodies may impede the induction of immune responses to the vaccine-encoded antigens, as they may reduce the dose and time of exposure of the target cells to the vaccinated antigens",
+      "prediction": "pre-existing immunity is a major obstacle",
+      "confidence": 0.0594,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "878",
+      "question": "What are methods to  avoid the effect of vector immune response on the efficacy of vaccination?",
+      "gold": "The inhibitory effect of pre-existing immunity can also be avoided by masking the Ad vector inside dendritic cells (DCs) (Steffensen et al., 2012) . In addition, mucosal vaccination or administration of higher vaccine doses can overcome pre-existing immunity problems (Alexander et al., 2012; Belyakov et al., 1999; Priddy et al., 2008; Xiang et al., 2003) .",
+      "prediction": "use of vectors derived from nonhuman sources",
+      "confidence": 0.1084,
+      "em": 0.0,
+      "f1": 0.0339
+    },
+    {
+      "id": "601",
+      "question": "How does the PED virus transmit between animals?",
+      "gold": "fecal–oral contact",
+      "prediction": "fecal–oral contact",
+      "confidence": 0.5239,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "603",
+      "question": "What cells are infected by the PED virus?",
+      "gold": "intestine epithelial cells",
+      "prediction": "intestine epithelial cells",
+      "confidence": 0.7008,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "605",
+      "question": "What intestinal factors may reduce the effectiveness of orally-administered immunizations?",
+      "gold": "gastric acids, pepsin, and trypsin",
+      "prediction": "physical, chemical, and biological barriers",
+      "confidence": 0.139,
+      "em": 0.0,
+      "f1": 0.2
+    },
+    {
+      "id": "606",
+      "question": "What is Bacillus subtilis?",
+      "gold": "Gram-positive bacterium",
+      "prediction": "nonpathogenic Gram-positive bacterium, B. subtilis has been regarded as a novel probiotic and food additive",
+      "confidence": 0.2067,
+      "em": 0.0,
+      "f1": 0.25
+    },
+    {
+      "id": "608",
+      "question": "Where do dendritic cells exist in the body?",
+      "gold": "gut-associated lymphoid tissue (GALT)",
+      "prediction": "gut-associated lymphoid tissue",
+      "confidence": 0.4652,
+      "em": 0.0,
+      "f1": 0.8571
+    },
+    {
+      "id": "609",
+      "question": "What are the components of the gut-associated lymphoid tissue?",
+      "gold": "Peyer's patches (PPs), isolated lymphoid follicles (ILFs), mesenteric lymph nodes (MLNs), and scatter throughout the subepithelial lamina propria (LP) of the small intestine and colon",
+      "prediction": "DCs",
+      "confidence": 0.2533,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1206",
+      "question": "How big was the temporary hospital built in Wuhan City for treatment of COVID-19 patients?",
+      "gold": "1000 bed hospital",
+      "prediction": "1000 bed",
+      "confidence": 0.2787,
+      "em": 0.0,
+      "f1": 0.8
+    },
+    {
+      "id": "1207",
+      "question": "How long did it take China to build the temporary hospital in Wuhan for COVID-19 patients?",
+      "gold": "10 days",
+      "prediction": "10 days",
+      "confidence": 0.3265,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1208",
+      "question": "What is a key factor in managing emerging infectious disease threats?",
+      "gold": "transparent sharing of information between countries and agencies",
+      "prediction": "rapid and transparent sharing of information",
+      "confidence": 0.3118,
+      "em": 0.0,
+      "f1": 0.7143
+    },
+    {
+      "id": "1209",
+      "question": "In what year did the MERS epidemic occur?",
+      "gold": "2012",
+      "prediction": "2012",
+      "confidence": 0.9526,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1210",
+      "question": "How long did it take to publish the full genomic sequence of SARS-CoV-2 after it was identified?",
+      "gold": "2 weeks",
+      "prediction": "less than 2 weeks",
+      "confidence": 0.6707,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "1211",
+      "question": "What was the fatality rate for SARS-CoV?",
+      "gold": "10%",
+      "prediction": "10%",
+      "confidence": 0.595,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1214",
+      "question": "What are the risks of health workers failing to wash hands?",
+      "gold": "autoinfection, but also in infection of patients hospitalised for other causes when they provide care",
+      "prediction": "can result not only in autoinfection, but also in infection of patients hospitalised for other causes when they provide care",
+      "confidence": 0.0707,
+      "em": 0.0,
+      "f1": 0.8571
+    },
+    {
+      "id": "1216",
+      "question": "What was the R0 of SARS in absence of control measures?",
+      "gold": "3",
+      "prediction": "around 3",
+      "confidence": 0.519,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "1944",
+      "question": "How many extracellular domains are in the CEAMCAM1 protein?",
+      "gold": "four",
+      "prediction": "four",
+      "confidence": 0.8634,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1946",
+      "question": "What motifs are absent in the short form of CEACAM1 protein?",
+      "gold": "immunoreceptor tyrosine-based inhibitory motifs (ITIMs)",
+      "prediction": "immunoreceptor tyrosine-based inhibitory motifs",
+      "confidence": 0.4242,
+      "em": 0.0,
+      "f1": 0.8889
+    },
+    {
+      "id": "1950",
+      "question": "What triggers the release of pro-inflammatory cytokines/chemokines to assist in viral clearance?",
+      "gold": "pattern recognition receptors (PRRs)",
+      "prediction": "Recognition of intracellular viral RNA",
+      "confidence": 0.1682,
+      "em": 0.0,
+      "f1": 0.2222
+    },
+    {
+      "id": "1952",
+      "question": "How do natural killer cells fight influenza viruses?",
+      "gold": "by recognizing and killing infected cells",
+      "prediction": "recognizing and killing infected cells",
+      "confidence": 0.4705,
+      "em": 0.0,
+      "f1": 0.9091
+    },
+    {
+      "id": "2251",
+      "question": "What is labeled in red?",
+      "gold": "residues corresponding to the NHR pocket region",
+      "prediction": "The residues corresponding to the NHR pocket region",
+      "confidence": 0.5298,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "2253",
+      "question": "What is marked in green?",
+      "gold": "MT-hook residues adjacent to the N terminus of PBD",
+      "prediction": "MT-hook residues adjacent to the N terminus of PBD",
+      "confidence": 0.4851,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "2259",
+      "question": "What figure shows that AP3 exhibited higher inhibitory activities on infection by HIV-1 IIIB and HIV-1 Bal strains?",
+      "gold": "Fig. 1b",
+      "prediction": "Fig. 1b",
+      "confidence": 0.8387,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "2260",
+      "question": "What is the serum half-life of T20?",
+      "gold": "about 2 h",
+      "prediction": "2 h",
+      "confidence": 0.2957,
+      "em": 0.0,
+      "f1": 0.8
+    },
+    {
+      "id": "2261",
+      "question": "What kind of model best describes the pharmacokinetic profiles of AP3 and AP2?",
+      "gold": "non-compartment model",
+      "prediction": "non-compartment",
+      "confidence": 0.6459,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "2262",
+      "question": "What is the in vivo elimination half-life of AP3?",
+      "gold": "6.02 h",
+      "prediction": "2.8-fold longer",
+      "confidence": 0.1996,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "641",
+      "question": "What are main steps for mitigating the COVID -19 transmission during transport of suspected and confirmed patients?",
+      "gold": "firstly, early recognition of the deteriorating patient; secondly, HCW safety; thirdly, bystander safety; fourthly, contingency plans for medical emergencies during transport; fifthly, post-transport decontamination",
+      "prediction": "planning and conducting safe patient transport",
+      "confidence": 0.0946,
+      "em": 0.0,
+      "f1": 0.1379
+    },
+    {
+      "id": "900",
+      "question": "How many deaths each year are caused by gastroenteritis?",
+      "gold": "two to three million",
+      "prediction": "two to three million",
+      "confidence": 0.917,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "901",
+      "question": "What percentage of sporadic diarrhea are caused by norovirus?",
+      "gold": "60%",
+      "prediction": "60%",
+      "confidence": 0.8187,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "905",
+      "question": "What are the most common DNA-based techniques for detecting viruses?",
+      "gold": "1. Universal primer-PCR [41] ; 2. Random priming-based PCR [42] ; 3. Virus Discovery cDNA, Amplified Fragment Length Polymorphism (VIDISCA) [43] ; and 4. Sequence-Independent Single Primer Amplification (SISPA)",
+      "prediction": "Universal primer-PCR [41] ; 2. Random priming-based PCR [42]",
+      "confidence": 0.1216,
+      "em": 0.0,
+      "f1": 0.4706
+    },
+    {
+      "id": "907",
+      "question": "What is Koch's first postulate?",
+      "gold": "The microbe occurs in every case of the disease in question and under circumstances which can account for the pathological changes and clinical course of the disease",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "908",
+      "question": "What is Koch's second postulate?",
+      "gold": "the microbe occurs in no other disease as a fortuitous and nonpathogenic parasite",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "909",
+      "question": "What is Koch's third postulate?",
+      "gold": "after being fully isolated from the body and repeatedly grown in pure culture, the microbe can induce the disease anew",
+      "prediction": "The microbe occurs in every case of the disease in question",
+      "confidence": 0.0863,
+      "em": 0.0,
+      "f1": 0.2308
+    },
+    {
+      "id": "911",
+      "question": "If all 3 of Koch's postulates are met, what does this indicate?",
+      "gold": "microbe is the cause of the disease",
+      "prediction": "the occurrence of the microbe in the disease can no longer be accidental, but in this case no other relation between it and the disease except that the microbe is the cause of the disease can be considered\"",
+      "confidence": 0.1321,
+      "em": 0.0,
+      "f1": 0.2778
+    },
+    {
+      "id": "912",
+      "question": "Is Koch's postulate applicable to enteric viruses?",
+      "gold": "not applicable",
+      "prediction": "not applicable",
+      "confidence": 0.3455,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5163",
+      "question": "What changes do viruses make to be unrecognizable to previously neutralizing antibodies?",
+      "gold": "point mutations on immunodominant regions of surface proteins",
+      "prediction": "accumulation of point mutations",
+      "confidence": 0.2803,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "5164",
+      "question": "What is hepatitis C?",
+      "gold": "positive-sense single stranded RNA enveloped virus",
+      "prediction": "chronic hepatitis",
+      "confidence": 0.1711,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "5165",
+      "question": "How large is the HCV genome?",
+      "gold": "3,000 aminoacids",
+      "prediction": "3,000 aminoacids",
+      "confidence": 0.4436,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5166",
+      "question": "What are the non-structural proteins encoded by the HCV genome?",
+      "gold": "p7, NS2, NS3, NS4A, NS4B, NS5A and NS5B",
+      "prediction": "p7, NS2, NS3, NS4A, NS4B, NS5A and NS5B",
+      "confidence": 0.9552,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5167",
+      "question": "Why has it been difficult to develop a therapy for the Hepatitis C virus?",
+      "gold": "high mutation rate",
+      "prediction": "high mutation rate",
+      "confidence": 0.2244,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5168",
+      "question": "An antibody response to which proteins correlates with reduced HCV levels?",
+      "gold": "glycoproteins E1 and E2",
+      "prediction": "envelope glycoproteins E1 and E2",
+      "confidence": 0.7225,
+      "em": 0.0,
+      "f1": 0.8889
+    },
+    {
+      "id": "5169",
+      "question": "How are type A, B, and C viruses determined?",
+      "gold": "antigenic differences of their nucleoprotein and matrix protein",
+      "prediction": "antigenic differences of their nucleoprotein and matrix protein",
+      "confidence": 0.4941,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5170",
+      "question": "Which type of influenza causes epidemics and pandemics?",
+      "gold": "influenza A",
+      "prediction": "influenza A",
+      "confidence": 0.8686,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "5172",
+      "question": "What was the purpose of this study?",
+      "gold": "to assess the evolutionary history of lion",
+      "prediction": "to assess the evolutionary history of lion",
+      "confidence": 0.1407,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1721",
+      "question": "What has been the application of phage display technology?",
+      "gold": "protein–protein interactions.",
+      "prediction": "studies of protein–protein interactions",
+      "confidence": 0.4505,
+      "em": 0.0,
+      "f1": 0.6667
+    },
+    {
+      "id": "1726",
+      "question": "Why is the phage ab excellent model system for directed protein evolution?",
+      "gold": "the phage’s large population sizes and fast generation times",
+      "prediction": "large population sizes and fast generation times",
+      "confidence": 0.673,
+      "em": 0.0,
+      "f1": 0.9333
+    },
+    {
+      "id": "1728",
+      "question": "What invention has made bacteriophage useful for research?",
+      "gold": "principle of modifying the filamentous phage genome to display polypeptides as fusions to coat proteins on the virion surface",
+      "prediction": "the principle of modifying the filamentous phage genome to display polypeptides as fusions to coat proteins on the virion surface",
+      "confidence": 0.2403,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1730",
+      "question": "What has the bacteriphage technology and the library of folded protein variants enabled?",
+      "gold": "the ability to seamlessly connect genetic information with protein function for a large number of protein variants simultaneously, and has been widely and productively exploited in studies of proteinprotein interactions",
+      "prediction": "connect genetic information with protein function",
+      "confidence": 0.1151,
+      "em": 0.0,
+      "f1": 0.3529
+    },
+    {
+      "id": "1733",
+      "question": "What do applications of filamentous phage depend on?",
+      "gold": "its ability to display polypeptides on the virion's surface as fusions to phage coat proteins",
+      "prediction": "its ability to display polypeptides on the virion's surface as fusions to phage coat proteins",
+      "confidence": 0.3875,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1738",
+      "question": "What characteristic of filamentous phage has been demonstrated?",
+      "gold": "is highly immunogenic in the absence of adjuvants (Meynell and Lawn, 1968 ) and that only the major coat protein, pVIII, and the minor coat protein, pIII, are targeted by antibodies",
+      "prediction": "highly immunogenic",
+      "confidence": 0.7409,
+      "em": 0.0,
+      "f1": 0.1379
+    },
+    {
+      "id": "1739",
+      "question": "What application is a natural extension of the  ability to display recombinant exogenous sequences on its surface?",
+      "gold": "as carrier to elicit antibodies against poorly immunogenic haptens or polypeptide",
+      "prediction": "using the phage as carrier",
+      "confidence": 0.3184,
+      "em": 0.0,
+      "f1": 0.2667
+    },
+    {
+      "id": "1742",
+      "question": "Why are antibody epitope based peptide vaccines are no longer an active research area?",
+      "gold": "(i) in many cases, peptides incompletely or inadequately mimic epitopes on folded proteins (Irving et al., 2010 ; see below); (ii) antibodies against a single epitope may be of limited utility, especially for highly variable pathogens (Van Regenmortel, 2012); and (iii) for pathogens for which protective immune responses are generated efficiently during natural infection, peptide vaccines offer few advantages over recombinant subunit and live vector vaccines, which have become easier to produce over time.",
+      "prediction": "peptides incompletely or inadequately mimic epitopes on folded proteins",
+      "confidence": 0.2716,
+      "em": 0.0,
+      "f1": 0.2222
+    },
+    {
+      "id": "1745",
+      "question": "Which are some phage based contraceptive vaccines for animals?",
+      "gold": "Phage displaying or chemically Rubinchik and Chow (2000) conjugated to sperm antigen peptides or peptide mimics (Samoylova et al., 2012a,b) and gonadotropin-releasing hormone (Samoylov et al., 2012) are also in development.",
+      "prediction": "phage displaying follicle-stimulating hormone peptides on pVIII elicited antibodies that impaired the fertility of mice and ewes",
+      "confidence": 0.1648,
+      "em": 0.0,
+      "f1": 0.2128
+    },
+    {
+      "id": "1752",
+      "question": "Why is phage self-adjuvanting?",
+      "gold": "Host cell wall-derived LPS enhances the virion's immunogenicity, and its removal by polymyxin B chromatography reduces antibody titers against phage coat proteins (Grabowska et al., 2000) . The phage's singlestranded DNA genome contains CpG motifs and may also have an adjuvant effect.",
+      "prediction": "Host cell wall-derived LPS enhances the virion's immunogenicity",
+      "confidence": 0.2134,
+      "em": 0.0,
+      "f1": 0.3111
+    },
+    {
+      "id": "1753",
+      "question": "On what does the antibody  response to phage depend on?",
+      "gold": "MyD88 signaling and is modulated by stimulation of several Toll-like receptors (Hashiguchi et al., 2010) , indicating that innate immunity plays an important",
+      "prediction": "MyD88 signaling",
+      "confidence": 0.765,
+      "em": 0.0,
+      "f1": 0.1739
+    },
+    {
+      "id": "1757",
+      "question": "What were more potent inhibitors of Staphylococcus aureus growth than high-concentration free chloramphenicol?",
+      "gold": "M13 or fd phage displaying either a targeting peptide or antibody fragment and tethered to chloramphenicol by a labile crosslinker",
+      "prediction": "M13 or fd phage",
+      "confidence": 0.7001,
+      "em": 0.0,
+      "f1": 0.3636
+    },
+    {
+      "id": "1758",
+      "question": "What killed prostate cancer cells in vitro?",
+      "gold": "M13 phage loaded with doxorubicin and displaying a targeting peptide on pIII",
+      "prediction": "M13 phage loaded with doxorubicin",
+      "confidence": 0.2843,
+      "em": 0.0,
+      "f1": 0.625
+    },
+    {
+      "id": "1762",
+      "question": "What makes filamentous phage ideal scaffold for bioconjugation?",
+      "gold": "The regularity of the phage pVIII lattice and its diversity of chemically addressable groups",
+      "prediction": "The regularity of the phage pVIII lattice",
+      "confidence": 0.2674,
+      "em": 0.0,
+      "f1": 0.5882
+    },
+    {
+      "id": "1763",
+      "question": "What trials have been done to demonstrate the potential of phage in applications for nanomaterials?",
+      "gold": "Lee et al. (2002) engineered M13 phage to display a ZnS-binding peptide on pIII and showed that, in the presence of ZnS nanoparticles, they selfassemble into highly ordered film biomaterials that can be aligned using magnetic fields.",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1765",
+      "question": "What is the filamentous phage varion is made of?",
+      "gold": "made up of ∼2,500-4,000 overlapping copies of the 50-residue major coat protein, pVIII, arranged in a shingle-type lattice. Each monomer has an array of chemically addressable groups available for bioorthogonal conjugation, including two primary amine groups (shown in red), three carboxyl groups (show in blue) and two hydroxyl groups (show in green). The 12 N-terminal residues generally exposed to the immune system for antibody binding",
+      "prediction": "pVIII",
+      "confidence": 0.2689,
+      "em": 0.0,
+      "f1": 0.0328
+    },
+    {
+      "id": "1766",
+      "question": "What demonstrate the potential of phage in applications for nanomaterials?",
+      "gold": "construction of two-and threedimensional nanomaterials with more advanced architectures, including semiconducting nanowires (Mao et al., 2003 (Mao et al., , 2004 , nanoparticles , and nanocomposites (Oh et al., 2012; Chen et al., 2014)",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "5289",
+      "question": "Which q-score reads were eliminated from the analysis?",
+      "gold": "lower than 7",
+      "prediction": "7",
+      "confidence": 0.3456,
+      "em": 0.0,
+      "f1": 0.5
+    },
+    {
+      "id": "913",
+      "question": "What is Clodstridium difficile?",
+      "gold": "Gram positive, anaerobic bacterium",
+      "prediction": "a Gram positive, anaerobic bacterium that can form highly resistant endospores",
+      "confidence": 0.4758,
+      "em": 0.0,
+      "f1": 0.5714
+    },
+    {
+      "id": "914",
+      "question": "What is sporulation?",
+      "gold": "adaptive strategy that enables bacteria to survive harsh environmental conditions for prolonged periods of time",
+      "prediction": "an adaptive strategy",
+      "confidence": 0.2202,
+      "em": 0.0,
+      "f1": 0.2353
+    },
+    {
+      "id": "915",
+      "question": "What is the key regulator to sporulation?",
+      "gold": "Spo0A",
+      "prediction": "Spo0A",
+      "confidence": 0.9325,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "935",
+      "question": "What is the mortality rate of Venezuelan equine encephalitis virus in children?",
+      "gold": "35%",
+      "prediction": "35%",
+      "confidence": 0.7491,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "936",
+      "question": "What is the mortality rate of Venezuelan equine encephalitis virus in adults?",
+      "gold": "10%",
+      "prediction": "10%",
+      "confidence": 0.9663,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "938",
+      "question": "What can RNA sequencing be used to monitor?",
+      "gold": "changes in gene expression",
+      "prediction": "changes in gene expression",
+      "confidence": 0.3169,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "939",
+      "question": "What activates the UPR pathway in the cell?",
+      "gold": "protein misfolding",
+      "prediction": "endoplasmic reticulum (ER) stress",
+      "confidence": 0.5406,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "942",
+      "question": "Where does EGR1 accumulate in the cell?",
+      "gold": "nucleus",
+      "prediction": "nucleus",
+      "confidence": 0.5909,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1253",
+      "question": "How many people did SARS-CoV infect?",
+      "gold": "8000",
+      "prediction": "8000",
+      "confidence": 0.5285,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1256",
+      "question": "What percentage of people infected with MERS-CoV died?",
+      "gold": "35-50%",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1258",
+      "question": "What was the reservoir for SARS-CoV and MERS-CoV?",
+      "gold": "animal reservoirs",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1260",
+      "question": "What was the primary threatening clinical finding in patients infected with SARS-CoV and MERS-CoV?",
+      "gold": "severe lung pathology",
+      "prediction": "acute lung injury",
+      "confidence": 0.172,
+      "em": 0.0,
+      "f1": 0.3333
+    },
+    {
+      "id": "1262",
+      "question": "What is the relationship between SARS-CoV and acute lung injury (ALI)?",
+      "gold": "Many infected patients have acute lung injury (ALI)",
+      "prediction": "diagnosed based on the presence of pulmonary edema and respiratory failure without a cardiac cause",
+      "confidence": 0.073,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1266",
+      "question": "How does cell-entry differ between SARS-CoV and MERS-CoV?",
+      "gold": "SARS-CoV uses the ACE2 receptor to gain entry to cells, while MERS-CoV uses the ectopeptidase DPP4",
+      "prediction": "The two viruses have different receptors leading to different cellular tropism",
+      "confidence": 0.0988,
+      "em": 0.0,
+      "f1": 0.0833
+    },
+    {
+      "id": "1267",
+      "question": "What is a major difference in clinical progression between SARS-CoV and MERS-CoV?",
+      "gold": "Unlike SARS-CoV infection, which causes primarily a severe respiratory syndrome, MERS-CoV infection can also lead to kidney failure",
+      "prediction": "ARDS",
+      "confidence": 0.1763,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1269",
+      "question": "How do SARS-CoV and MERS-CoV evade the immune system sensing it's genome?",
+      "gold": "SARS-CoV and MERS-CoV are contained in double membrane vesicles",
+      "prediction": "double membrane vesicles (DMVs)",
+      "confidence": 0.1581,
+      "em": 0.0,
+      "f1": 0.4615
+    },
+    {
+      "id": "1272",
+      "question": "What is the timeline of the type I interferon (IFN) response in SARS-CoV infection?",
+      "gold": "In a mouse model of SARS-CoV infection, the type I IFN response is delayed",
+      "prediction": "delayed",
+      "confidence": 0.6217,
+      "em": 0.0,
+      "f1": 0.1538
+    },
+    {
+      "id": "1271",
+      "question": "How do SARS-CoV viral proteins interact with the immune response?",
+      "gold": "several viral proteins suppress the type I IFN response, and other aspects of innate antiviral immunity",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1276",
+      "question": "What is the role of topoisomerase I in improving host resilience in viral lung infections?",
+      "gold": "A recent paper demonstrates that topoisomerase I can protect against inflammation-induced death from a variety of viral infections including IAV",
+      "prediction": "can protect against inflammation-induced death",
+      "confidence": 0.1137,
+      "em": 0.0,
+      "f1": 0.4348
+    },
+    {
+      "id": "1277",
+      "question": "What is the role of complement 5a (C5a) in increasing host resilience to viral lung infection?",
+      "gold": "Blockade of C5a complement signaling has also been suggested as a possible option in decreasing inflammation during IAV infection",
+      "prediction": "",
+      "confidence": null,
+      "em": 0.0,
+      "f1": 0.0
+    },
+    {
+      "id": "1280",
+      "question": "Which immune factors were associated with increased SARS-CoV morbidity and mortality?",
+      "gold": "a higher neutrophil count and low T-cell counts",
+      "prediction": "higher neutrophil count and low T-cell counts",
+      "confidence": 0.5097,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "1283",
+      "question": "Can biomarkers be used to predict outcomes in acute respiratory distress (ARDS) patients?",
+      "gold": "Clinical studies have started to correlate specific biomarkers with disease outcomes in ARDS patients",
+      "prediction": "Clinical studies have started to correlate specific biomarkers with disease outcomes in ARDS patients",
+      "confidence": 0.0796,
+      "em": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "3624",
+      "question": "What other betacoronaviruses are zoonotic in origin?",
+      "gold": "The severe acute respiratory syndrome coronavirus (SARS-CoV) and Middle East respiratory syndrome coronavirus (MERS-CoV)",
+      "prediction": "severe acute respiratory syndrome coronavirus (SARS-CoV) and Middle East respiratory syndrome coronavirus (MERS-CoV)",
+      "confidence": 0.3028,
+      "em": 1.0,
+      "f1": 1.0
+    }
+  ]
+}

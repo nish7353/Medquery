@@ -52,6 +52,20 @@ class Notice(BaseModel):
     message: str
 
 
+class Localization(BaseModel):
+    """The answer in the user's language. The English fields stay authoritative."""
+
+    language: str                       # BCP-47 code, e.g. "kn-IN"
+    original_question: str              # exactly what the user asked
+    english_question: str               # what the English pipeline searched for
+    question_translated: bool
+    answer_text: str | None = None      # translated answer span (None when there is no answer)
+    status_message: str                 # translated explanation of the status
+    notices: list[str] = Field(default_factory=list)  # translated notice messages, same order as `notices`
+    complete: bool = True               # False if any part fell back to English
+    warnings: list[str] = Field(default_factory=list)  # e.g. "numbers_changed", "partial_translation"
+
+
 class QueryResult(BaseModel):
     id: str
     question: str
@@ -65,3 +79,4 @@ class QueryResult(BaseModel):
     timings_ms: dict[str, float] = Field(default_factory=dict)
     created_at: datetime
     disclaimer: str
+    localization: Localization | None = None

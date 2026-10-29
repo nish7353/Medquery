@@ -20,7 +20,7 @@ from app.routes import router
 from app.schemas import error
 
 logger = logging.getLogger("medquery")
-FRONTEND_DIR = PROJECT_DIR / "frontend"
+FRONTEND_DIST = PROJECT_DIR / "frontend" / "dist"
 
 
 def create_app(settings: Settings | None = None, services: Services | None = None) -> FastAPI:
@@ -55,9 +55,12 @@ def create_app(settings: Settings | None = None, services: Services | None = Non
             length = request.headers.get("content-length")
             body = await request.body() if length is None else None
             size = int(length) if length and length.isdigit() else len(body or b"")
-            if size > settings.max_request_bytes:
+            # Voice uploads get their own, larger limit (checked again in the route).
+            limit = (settings.max_audio_bytes + 64 * 1024 if request.url.path == "/api/transcribe"
+                     else settings.max_request_bytes)
+            if size > limit:
                 return JSONResponse(status_code=413, content=error(
-                    "payload_too_large", f"Request body exceeds {settings.max_request_bytes} bytes."))
+                    "payload_too_large", f"Request body exceeds {limit} bytes."))
         return await call_next(request)
 
     @app.exception_handler(RequestValidationError)
@@ -84,14 +87,14 @@ def create_app(settings: Settings | None = None, services: Services | None = Non
 
     # Serve the frontend explicitly (not a catch-all mount at "/") so unknown or
     # wrong-method /api requests still get JSON 404/405 responses.
-    if FRONTEND_DIR.is_dir():
-        for sub in ("css", "js"):
-            if (FRONTEND_DIR / sub).is_dir():
-                app.mount(f"/{sub}", StaticFiles(directory=FRONTEND_DIR / sub), name=sub)
+    # The UI is a Vite build: run `npm run build` in frontend/ to produce dist/.
+    if (FRONTEND_DIST / "index.html").is_file():
+        if (FRONTEND_DIST / "assets").is_dir():
+            app.mount("/assets", StaticFiles(directory=FRONTEND_DIST / "assets"), name="assets")
 
         @app.get("/", include_in_schema=False)
         async def index():
-            return FileResponse(FRONTEND_DIR / "index.html")
+            return FileResponse(FRONTEND_DIST / "index.html")
 
     return app
 

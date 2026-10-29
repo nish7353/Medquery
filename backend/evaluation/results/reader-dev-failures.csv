@@ -1,0 +1,16 @@
+id,question,gold,prediction,confidence,em,f1
+278,"How many children were infected by HIV-1 in 2008-2009, worldwide?","more than 400,000 children were infected worldwide, mostly through MTCT and 90% of them lived in sub-Saharan Africa.",,,0.0,0.0
+316,What is the role of C-C Motif Chemokine Ligand 3 Like 1 (CCL3L1) in mother to child transmission of HIV-1?,"High copy numbers of CCL3L1, a potent HIV-1 suppressive ligand for CCR5, are associated with higher chemokine production and lower risk of MTCT of HIV-1 among South African infants",potent HIV-1 suppressive ligand,0.1801,0.0,0.25
+321,How can CCR5's effect in HIV-1 transmission be reduced?,The 32-pb deletion polymorphism in CCR5 has be shown to protect from vertical transmission of HIV-1,,,0.0,0.0
+571,What interaction is inhibited by the presence of 2-bromopalmitic acid (2BP)?,IFITM5 with FKBP11,,,0.0,0.0
+576,What is the amino acid similarity between IFITM5 and the other IFITM proteins?,~ 65% similarity,~ 65%,0.2857,0.0,0.6667
+580,What amino acid might be involved in calcium binding in the C-terminal region of a protein?,aspartate,aspartate-rich domain,0.8707,0.0,0.0
+919,How many nucleotides does bovine coronavirus contain?,"30,847 nucleotides",,,0.0,0.0
+920,What is the size of the orf1ab gene in bovine coronavirus?,20kb,20kb nucleotides,0.6536,0.0,0.6667
+1660,Which Human Coronavirus showed species specific clinical characteristics of its infection?,HCoV‐HKU1,,,0.0,0.0
+1717,What causes the outbreak of SARS and MERS.,Highly virulent species of HCoV,,,0.0,0.0
+1718,What is the case fatality rate of SARS and MERS?,ranged from 14% to 45%,14% to 45%,0.6518,0.0,0.75
+2996,What is required for a Hepatitis B infection in cells?,both intracellular and cell-surface factors,,,0.0,0.0
+2997,"What regulates the broad, but less specific, virus-cell interaction in a hepatitis B infection?",heparan sulfates in the membrane proteins,heparan sulfates,0.5741,0.0,0.5714
+2999,Where is NTCP located in the body?,lateral surface (canalicular) of hepatocytes,lateral surface,0.3169,0.0,0.5714
+3001,Is NTCP sufficient to allow HBV infection?,not sufficient,not,0.8178,0.0,0.6667

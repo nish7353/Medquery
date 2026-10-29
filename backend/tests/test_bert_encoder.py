@@ -75,3 +75,30 @@ def test_unavailable_model_degrades_gracefully():
     assert analysis.bert_available is False
     assert analysis.summary()["bert"]["available"] is False
     assert analysis.pre.keywords == ["term", "alpha"]
+
+
+def test_model_loads_never_overlap():
+    """Two models warming up at once must load one after the other (transformers import race)."""
+    import threading
+    import time
+
+    from app.lazy_model import LazyModel
+
+    active, overlaps = [], []
+
+    def loader():
+        active.append(1)
+        if len(active) > 1:
+            overlaps.append(True)
+        time.sleep(0.05)
+        active.pop()
+        return object()
+
+    models = [LazyModel(f"m{i}", f"m{i}", loader) for i in range(3)]
+    threads = [threading.Thread(target=m.get) for m in models]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    assert not overlaps
+    assert all(m.state == ModelState.READY for m in models)

@@ -113,6 +113,7 @@ class AnswerPipeline:
                 keywords=analysis.pre.keywords,
                 question_type=analysis.pre.question_type,
                 embedding=analysis.encoded.embedding if analysis.encoded else None,
+                embedding_model=self.understanding.encoder.model.model_name,
                 top_k=self.top_k,
             )
         )

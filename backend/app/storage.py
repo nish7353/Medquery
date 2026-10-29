@@ -29,7 +29,8 @@ class QueryStore:
         with self._lock:
             self._conn.execute(
                 "INSERT OR REPLACE INTO queries (id, question, status, created_at, payload) VALUES (?, ?, ?, ?, ?)",
-                (result.id, result.question, result.status.value, result.created_at.isoformat(),
+                (result.id, result.localization.original_question if result.localization else result.question,
+                 result.status.value, result.created_at.isoformat(),
                  result.model_dump_json()),
             )
             self._conn.commit()
